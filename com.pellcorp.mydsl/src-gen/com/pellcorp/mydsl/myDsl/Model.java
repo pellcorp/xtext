@@ -107,7 +107,7 @@ public interface Model extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Built In Types</em>' containment reference list.
    * @see com.pellcorp.mydsl.myDsl.MyDslPackage#getModel_BuiltInTypes()
-   * @model containment="true" transient="true"
+   * @model containment="true"
    * @generated
    */
   EList<BuiltInType> getBuiltInTypes();
@@ -123,7 +123,7 @@ public interface Model extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hidden Built In Types</em>' containment reference list.
    * @see com.pellcorp.mydsl.myDsl.MyDslPackage#getModel_HiddenBuiltInTypes()
-   * @model containment="true" transient="true"
+   * @model containment="true"
    * @generated
    */
   EList<BuiltInType> getHiddenBuiltInTypes();

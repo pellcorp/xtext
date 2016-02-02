@@ -2,6 +2,7 @@ package com.pellcorp.mydsl.tests;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 import org.eclipse.emf.common.util.URI;
@@ -39,18 +40,33 @@ public class XmiSerialiserTest extends Assert {
 		
 		assertEquals(1, model.getDataTypes().size());
 		
+		byte[] bytes = toByteArray(rs, model);
+		
+		rs.getResources().remove(resource);
+		
+		Resource xmiResource2 = rs.createResource(URI.createURI("dummy:/test2.xmi"));
+		
+		// here is where I get Unresolved reference '//@builtInTypes.0'
+		xmiResource2.load(new ByteArrayInputStream(bytes), rs.getLoadOptions());
+		Model model2 = (Model) xmiResource2.getContents().get(0);
+		System.out.println(toString(rs, model2));
+	}
+	
+	private String toString(XtextResourceSet rs, Model model) throws IOException {
+		Resource xmiResource = rs.createResource(URI.createURI("dummy:/model.mydsl"));
+		xmiResource.getContents().add(model);
+		ByteArrayOutputStream os = new ByteArrayOutputStream();
+		xmiResource.save(os, null);
+		xmiResource.unload();
+		return new String(os.toByteArray(), "UTF-8");
+	}
+	
+	private byte[] toByteArray(XtextResourceSet rs, Model model) throws IOException {
 		Resource xmiResource = rs.createResource(URI.createURI("dummy:/test.xmi"));
 		xmiResource.getContents().add(model);
 		ByteArrayOutputStream os = new ByteArrayOutputStream();
 		xmiResource.save(os, null);
 		xmiResource.unload();
-		resource.unload();
-		
-		Resource xmiResource2 = rs.createResource(URI.createURI("dummy:/test2.xmi"));
-		
-		// here is where I get Unresolved reference '//@builtInTypes.0'
-		xmiResource2.load(new ByteArrayInputStream(os.toByteArray()), rs.getLoadOptions());
+		return os.toByteArray();
 	}
-	
-	
 }

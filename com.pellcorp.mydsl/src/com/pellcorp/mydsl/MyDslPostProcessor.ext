@@ -1,8 +1,3 @@
-/* 
- * This transformation of the DPM Ecore model is invoked
- * after Xtext has inferred the Ecore model but before
- * Java code is being generated from the Ecore model.
- */
 import ecore;
  
 process(xtext::GeneratedMetamodel this) :
@@ -17,9 +12,9 @@ process(EClassifier this) :
 process(EClass this) :  
 	switch (name) {
 		case 'Model': (eStructuralFeatures.add(
-			newReference('builtInTypes', ePackage.getEClassifier("BuiltInType"), true, true, true)) ->
-			findEReference("builtInFunctions").setTransient(true) ->
-			eStructuralFeatures.add(newReference('hiddenBuiltInTypes', ePackage.getEClassifier("BuiltInType"), true, true, true))
+			newReference('builtInTypes', ePackage.getEClassifier("BuiltInType"), true, true)) ->
+			findEReference("builtInFunctions") ->
+			eStructuralFeatures.add(newReference('hiddenBuiltInTypes', ePackage.getEClassifier("BuiltInType"), true, true))
 			)
 		case 'Field':
 			(
@@ -29,38 +24,12 @@ process(EClass this) :
 	default: null
 	};
 
-		
-// Use this for Ecore datatypes (EString, EInt ...)
-create EAttribute newAttribute(EClass owner, String name, EClassifier type, Boolean many, Boolean transient) :
-	setName(name) -> setEType(type) -> setUpperBound(many ? -1 : 1) -> setTransient(transient) -> owner.eStructuralFeatures.add(this);
+create EReference newReference(EClass owner, String name, EClassifier type, Boolean containment, Boolean many) :
+	setName(name) -> setEType(type) -> setUpperBound(many ? -1 : 1) -> setContainment(containment) -> owner.eStructuralFeatures.add(this);
 
-create EAttribute newStringAttribute(EClass owner, String name, String defaultValue) :
-	setName(name) -> setEType(getEcoreDataType("EString")) -> setUpperBound(1) -> setDefaultValueLiteral(defaultValue) -> setTransient(false) -> owner.eStructuralFeatures.add(this);
-
-// Use this for user-defined EClasses inside or outside the model.
-create EReference newReference(EClass owner, String name, EClassifier type, Boolean containment, Boolean many, Boolean transient) :
-	setName(name) -> setEType(type) -> setUpperBound(many ? -1 : 1) -> setContainment(containment) -> setTransient(transient) -> owner.eStructuralFeatures.add(this);
-
-create EReference this createBackReference(String name, EClass etype, String refName) :
-	this.setName(name) ->
-	this.setEType(etype) ->
-	this.setLowerBound(0) ->
-	this.setUpperBound(-1) ->
-	this.setEOpposite(etype.findEReference(refName))
-;
-
-removeReference(EClass this, String name) :
-	eStructuralFeatures.remove(eStructuralFeatures.selectFirst(e|e.name==name));
-
-EDataType getEcoreDataType(String name) :
-    org::eclipse::emf::ecore::EcorePackage::eINSTANCE.getEClassifier(name);
-    
 EReference findEReference(EClass this, String refName):
 	this.eStructuralFeatures.typeSelect(EReference).selectFirst(e|e.name == refName);
 	
 EAttribute findEAttribute(EClass this, String attrName):
 	this.eStructuralFeatures.typeSelect(EAttribute).selectFirst(e|e.name == attrName);
 
-EClass findEClass(EPackage pkg, String clsName) :
-	pkg.eClassifiers.typeSelect(ecore::EClass).selectFirst(e|e.name == clsName);
- 

@@ -4,8 +4,10 @@
 package com.pellcorp.mydsl;
 
 import org.eclipse.xtext.linking.ILinker;
+import org.eclipse.xtext.parsetree.reconstr.ITransientValueService;
 
 import com.pellcorp.mydsl.linker.MyDslLazyLinker;
+import com.pellcorp.mydsl.services.MyDslTransientValueService;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -15,5 +17,10 @@ public class MyDslRuntimeModule extends com.pellcorp.mydsl.AbstractMyDslRuntimeM
 	public Class<? extends ILinker> bindILinker() {
 		// Add Built-in Types to model before linking.
 		return MyDslLazyLinker.class;
+	}
+	
+	@Override
+	public Class<? extends ITransientValueService> bindITransientValueService() {
+		return MyDslTransientValueService.class;
 	}
 }

@@ -7,9 +7,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataTypes" upperBound="-1"
         eType="#//Entity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="builtInTypes" upperBound="-1"
-        eType="#//BuiltInType" transient="true" containment="true"/>
+        eType="#//BuiltInType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hiddenBuiltInTypes" upperBound="-1"
-        eType="#//BuiltInType" transient="true" containment="true"/>
+        eType="#//BuiltInType" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
