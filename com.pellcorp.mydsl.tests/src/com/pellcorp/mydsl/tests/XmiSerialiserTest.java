@@ -1,5 +1,7 @@
 package com.pellcorp.mydsl.tests;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
 import org.eclipse.emf.common.util.URI;
@@ -25,24 +27,30 @@ public class XmiSerialiserTest extends Assert {
 	
 	@Test
 	public void loadMyDsl() throws Exception {
-		InputStream modelStream = XmiSerialiserTest.class.getResourceAsStream("/com/pellcorp/mydsl/tests/test_1000_entities_with_3_fields_each.mydsl");
+		InputStream modelStream = XmiSerialiserTest.class.getResourceAsStream("/com/pellcorp/mydsl/tests/test.mydsl");
 		
 		XtextResourceSet rs = injector.getInstance(XtextResourceSet.class);
 		rs.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
+		
 		XtextResource resource = (XtextResource) rs.createResource(URI.createURI("dummy:/model.mydsl"));
 		resource.load(modelStream, rs.getLoadOptions());
 		
 		Model model = (Model) resource.getContents().get(0);
-		//resource.unload();
 		
-		assertEquals(1000, model.getDataTypes().size());
+		assertEquals(1, model.getDataTypes().size());
 		
-		Resource xmiResource = rs.createResource(URI.createFileURI("/tmp/test.xmi"));
+		Resource xmiResource = rs.createResource(URI.createURI("dummy:/test.xmi"));
 		xmiResource.getContents().add(model);
-		xmiResource.save(null);
+		ByteArrayOutputStream os = new ByteArrayOutputStream();
+		xmiResource.save(os, null);
 		xmiResource.unload();
+		resource.unload();
 		
+		Resource xmiResource2 = rs.createResource(URI.createURI("dummy:/test2.xmi"));
 		
+		// here is where I get Unresolved reference '//@builtInTypes.0'
+		xmiResource2.load(new ByteArrayInputStream(os.toByteArray()), rs.getLoadOptions());
 	}
+	
 	
 }
