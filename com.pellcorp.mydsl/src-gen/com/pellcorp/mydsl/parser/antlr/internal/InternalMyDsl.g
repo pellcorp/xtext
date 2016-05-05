@@ -506,6 +506,104 @@ ruleField returns [EObject current=null]
 
 
 
+
+
+// Entry rule entryRuleChampionChallengerPort
+entryRuleChampionChallengerPort returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getChampionChallengerPortRule()); }
+	 iv_ruleChampionChallengerPort=ruleChampionChallengerPort 
+	 { $current=$iv_ruleChampionChallengerPort.current; } 
+	 EOF 
+;
+
+// Rule ChampionChallengerPort
+ruleChampionChallengerPort returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_name_0_0=RULE_ID
+		{
+			newLeafNode(lv_name_0_0, grammarAccess.getChampionChallengerPortAccess().getNameIDTerminalRuleCall_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getChampionChallengerPortRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_1=':' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getChampionChallengerPortAccess().getColonKeyword_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getChampionChallengerPortRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getChampionChallengerPortAccess().getTypeDataTypeCrossReference_2_0()); 
+	    }
+		ruleFQN		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_3='{' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getChampionChallengerPortAccess().getLeftCurlyBracketKeyword_3());
+    }
+	otherlv_4='percentage' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getChampionChallengerPortAccess().getPercentageKeyword_4());
+    }
+	otherlv_5=':' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getChampionChallengerPortAccess().getColonKeyword_5());
+    }
+(
+(
+		lv_percentage_6_0=RULE_INT
+		{
+			newLeafNode(lv_percentage_6_0, grammarAccess.getChampionChallengerPortAccess().getPercentageINTTerminalRuleCall_6_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getChampionChallengerPortRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"percentage",
+        		lv_percentage_6_0, 
+        		"INT");
+	    }
+
+)
+)	otherlv_7=';' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getChampionChallengerPortAccess().getSemicolonKeyword_7());
+    }
+	otherlv_8='}' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getChampionChallengerPortAccess().getRightCurlyBracketKeyword_8());
+    }
+)
+;
+
+
+
+
+
 RULE_DATE : '0'..'9' '0'..'9' '0'..'9' '0'..'9' '-' '0'..'9' '0'..'9' '-' '0'..'9' '0'..'9';
 
 RULE_INT : '-'? ('0'..'9')+;

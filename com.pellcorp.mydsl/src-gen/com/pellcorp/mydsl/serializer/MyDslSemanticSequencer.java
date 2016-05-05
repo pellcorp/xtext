@@ -6,6 +6,8 @@ package com.pellcorp.mydsl.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.pellcorp.mydsl.myDsl.BuiltInType;
+import com.pellcorp.mydsl.myDsl.ChampionChallenger;
+import com.pellcorp.mydsl.myDsl.ChampionChallengerPort;
 import com.pellcorp.mydsl.myDsl.Entity;
 import com.pellcorp.mydsl.myDsl.Field;
 import com.pellcorp.mydsl.myDsl.Model;
@@ -34,6 +36,12 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		if(semanticObject.eClass().getEPackage() == MyDslPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case MyDslPackage.BUILT_IN_TYPE:
 				sequence_BuiltInType(context, (BuiltInType) semanticObject); 
+				return; 
+			case MyDslPackage.CHAMPION_CHALLENGER:
+				sequence_ChampionChallenger(context, (ChampionChallenger) semanticObject); 
+				return; 
+			case MyDslPackage.CHAMPION_CHALLENGER_PORT:
+				sequence_ChampionChallengerPort(context, (ChampionChallengerPort) semanticObject); 
 				return; 
 			case MyDslPackage.ENTITY:
 				sequence_Entity(context, (Entity) semanticObject); 
@@ -64,6 +72,37 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		feeder.accept(grammarAccess.getBuiltInTypeAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getBuiltInTypeAccess().getDescriptionSTRINGTerminalRuleCall_1_0(), semanticObject.getDescription());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID type=[DataType|FQN] percentage=INT)
+	 */
+	protected void sequence_ChampionChallengerPort(EObject context, ChampionChallengerPort semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.CHAMPION_CHALLENGER_PORT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.CHAMPION_CHALLENGER_PORT__NAME));
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.CHAMPION_CHALLENGER_PORT__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.CHAMPION_CHALLENGER_PORT__TYPE));
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.CHAMPION_CHALLENGER_PORT__PERCENTAGE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.CHAMPION_CHALLENGER_PORT__PERCENTAGE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getChampionChallengerPortAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getChampionChallengerPortAccess().getTypeDataTypeFQNParserRuleCall_2_0_1(), semanticObject.getType());
+		feeder.accept(grammarAccess.getChampionChallengerPortAccess().getPercentageINTTerminalRuleCall_6_0(), semanticObject.getPercentage());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID description=STRING? championPort=ChampionChallengerPort challengerPorts+=ChampionChallengerPort*)
+	 */
+	protected void sequence_ChampionChallenger(EObject context, ChampionChallenger semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

@@ -69,6 +69,8 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
       case MyDslPackage.ENTITY: return createEntity();
       case MyDslPackage.BUILT_IN_TYPE: return createBuiltInType();
       case MyDslPackage.FIELD: return createField();
+      case MyDslPackage.CHAMPION_CHALLENGER: return createChampionChallenger();
+      case MyDslPackage.CHAMPION_CHALLENGER_PORT: return createChampionChallengerPort();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -127,6 +129,28 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
   {
     FieldImpl field = new FieldImpl();
     return field;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChampionChallenger createChampionChallenger()
+  {
+    ChampionChallengerImpl championChallenger = new ChampionChallengerImpl();
+    return championChallenger;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChampionChallengerPort createChampionChallengerPort()
+  {
+    ChampionChallengerPortImpl championChallengerPort = new ChampionChallengerPortImpl();
+    return championChallengerPort;
   }
 
   /**

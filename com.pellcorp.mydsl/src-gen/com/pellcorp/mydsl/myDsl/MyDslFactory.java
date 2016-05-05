@@ -68,6 +68,24 @@ public interface MyDslFactory extends EFactory
   Field createField();
 
   /**
+   * Returns a new object of class '<em>Champion Challenger</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Champion Challenger</em>'.
+   * @generated
+   */
+  ChampionChallenger createChampionChallenger();
+
+  /**
+   * Returns a new object of class '<em>Champion Challenger Port</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Champion Challenger Port</em>'.
+   * @generated
+   */
+  ChampionChallengerPort createChampionChallengerPort();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

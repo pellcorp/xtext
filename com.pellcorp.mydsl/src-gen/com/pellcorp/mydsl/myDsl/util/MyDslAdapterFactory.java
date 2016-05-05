@@ -100,6 +100,16 @@ public class MyDslAdapterFactory extends AdapterFactoryImpl
         return createFieldAdapter();
       }
       @Override
+      public Adapter caseChampionChallenger(ChampionChallenger object)
+      {
+        return createChampionChallengerAdapter();
+      }
+      @Override
+      public Adapter caseChampionChallengerPort(ChampionChallengerPort object)
+      {
+        return createChampionChallengerPortAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -192,6 +202,36 @@ public class MyDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFieldAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.pellcorp.mydsl.myDsl.ChampionChallenger <em>Champion Challenger</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallenger
+   * @generated
+   */
+  public Adapter createChampionChallengerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.pellcorp.mydsl.myDsl.ChampionChallengerPort <em>Champion Challenger Port</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallengerPort
+   * @generated
+   */
+  public Adapter createChampionChallengerPortAdapter()
   {
     return null;
   }

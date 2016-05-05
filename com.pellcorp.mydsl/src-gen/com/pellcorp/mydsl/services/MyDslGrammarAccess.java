@@ -337,6 +337,156 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_3_1() { return cSemicolonKeyword_3_1; }
 	}
+
+	public class ChampionChallengerElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChampionChallenger");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cChampionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cChallengerKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cDescriptionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cDescriptionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cDescriptionAssignment_4_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Keyword cChampionKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cChampionPortAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cChampionPortChampionChallengerPortParserRuleCall_6_0 = (RuleCall)cChampionPortAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cChallengerKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cChallengerPortsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cChallengerPortsChampionChallengerPortParserRuleCall_7_1_0 = (RuleCall)cChallengerPortsAssignment_7_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		
+		//ChampionChallenger:
+		//	"champion" "challenger" name=ID "{" ("description" description=STRING ";")? "champion"
+		//	championPort=ChampionChallengerPort ("challenger" challengerPorts+=ChampionChallengerPort)* "}";
+		@Override public ParserRule getRule() { return rule; }
+
+		//"champion" "challenger" name=ID "{" ("description" description=STRING ";")? "champion"
+		//championPort=ChampionChallengerPort ("challenger" challengerPorts+=ChampionChallengerPort)* "}"
+		public Group getGroup() { return cGroup; }
+
+		//"champion"
+		public Keyword getChampionKeyword_0() { return cChampionKeyword_0; }
+
+		//"challenger"
+		public Keyword getChallengerKeyword_1() { return cChallengerKeyword_1; }
+
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+
+		//("description" description=STRING ";")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"description"
+		public Keyword getDescriptionKeyword_4_0() { return cDescriptionKeyword_4_0; }
+
+		//description=STRING
+		public Assignment getDescriptionAssignment_4_1() { return cDescriptionAssignment_4_1; }
+
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_1_0() { return cDescriptionSTRINGTerminalRuleCall_4_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_4_2() { return cSemicolonKeyword_4_2; }
+
+		//"champion"
+		public Keyword getChampionKeyword_5() { return cChampionKeyword_5; }
+
+		//championPort=ChampionChallengerPort
+		public Assignment getChampionPortAssignment_6() { return cChampionPortAssignment_6; }
+
+		//ChampionChallengerPort
+		public RuleCall getChampionPortChampionChallengerPortParserRuleCall_6_0() { return cChampionPortChampionChallengerPortParserRuleCall_6_0; }
+
+		//("challenger" challengerPorts+=ChampionChallengerPort)*
+		public Group getGroup_7() { return cGroup_7; }
+
+		//"challenger"
+		public Keyword getChallengerKeyword_7_0() { return cChallengerKeyword_7_0; }
+
+		//challengerPorts+=ChampionChallengerPort
+		public Assignment getChallengerPortsAssignment_7_1() { return cChallengerPortsAssignment_7_1; }
+
+		//ChampionChallengerPort
+		public RuleCall getChallengerPortsChampionChallengerPortParserRuleCall_7_1_0() { return cChallengerPortsChampionChallengerPortParserRuleCall_7_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+	}
+
+	public class ChampionChallengerPortElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChampionChallengerPort");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTypeDataTypeCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
+		private final RuleCall cTypeDataTypeFQNParserRuleCall_2_0_1 = (RuleCall)cTypeDataTypeCrossReference_2_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cPercentageKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cPercentageAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cPercentageINTTerminalRuleCall_6_0 = (RuleCall)cPercentageAssignment_6.eContents().get(0);
+		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		
+		//ChampionChallengerPort:
+		//	name=ID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}";
+		@Override public ParserRule getRule() { return rule; }
+
+		//name=ID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}"
+		public Group getGroup() { return cGroup; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+
+		//type=[DataType|FQN]
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+
+		//[DataType|FQN]
+		public CrossReference getTypeDataTypeCrossReference_2_0() { return cTypeDataTypeCrossReference_2_0; }
+
+		//FQN
+		public RuleCall getTypeDataTypeFQNParserRuleCall_2_0_1() { return cTypeDataTypeFQNParserRuleCall_2_0_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+
+		//"percentage"
+		public Keyword getPercentageKeyword_4() { return cPercentageKeyword_4; }
+
+		//":"
+		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
+
+		//percentage=INT
+		public Assignment getPercentageAssignment_6() { return cPercentageAssignment_6; }
+
+		//INT
+		public RuleCall getPercentageINTTerminalRuleCall_6_0() { return cPercentageINTTerminalRuleCall_6_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+	}
 	
 	
 	private final ModelElements pModel;
@@ -348,6 +498,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final EntityElements pEntity;
 	private final BuiltInTypeElements pBuiltInType;
 	private final FieldElements pField;
+	private final ChampionChallengerElements pChampionChallenger;
+	private final ChampionChallengerPortElements pChampionChallengerPort;
 	
 	private final Grammar grammar;
 
@@ -367,6 +519,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pEntity = new EntityElements();
 		this.pBuiltInType = new BuiltInTypeElements();
 		this.pField = new FieldElements();
+		this.pChampionChallenger = new ChampionChallengerElements();
+		this.pChampionChallengerPort = new ChampionChallengerPortElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -482,6 +636,27 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getFieldRule() {
 		return getFieldAccess().getRule();
+	}
+
+	//ChampionChallenger:
+	//	"champion" "challenger" name=ID "{" ("description" description=STRING ";")? "champion"
+	//	championPort=ChampionChallengerPort ("challenger" challengerPorts+=ChampionChallengerPort)* "}";
+	public ChampionChallengerElements getChampionChallengerAccess() {
+		return pChampionChallenger;
+	}
+	
+	public ParserRule getChampionChallengerRule() {
+		return getChampionChallengerAccess().getRule();
+	}
+
+	//ChampionChallengerPort:
+	//	name=ID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}";
+	public ChampionChallengerPortElements getChampionChallengerPortAccess() {
+		return pChampionChallengerPort;
+	}
+	
+	public ParserRule getChampionChallengerPortRule() {
+		return getChampionChallengerPortAccess().getRule();
 	}
 
 	//terminal ID:

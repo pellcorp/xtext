@@ -21,30 +21,31 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_DATE", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'workspace'", "';'", "'description'", "'.'", "'entity'", "'{'", "'}'", "':'", "'['", "','", "'*'", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_DATE", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'workspace'", "';'", "'description'", "'.'", "'entity'", "'{'", "'}'", "':'", "'['", "','", "'*'", "']'", "'percentage'"
     };
-    public static final int RULE_ID=4;
-    public static final int RULE_DATE=7;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=12;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=9;
-    public static final int T__19=19;
     public static final int RULE_STRING=5;
-    public static final int T__16=16;
+    public static final int RULE_SL_COMMENT=10;
+    public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__18=18;
+    public static final int T__16=16;
     public static final int T__17=17;
-    public static final int T__14=14;
+    public static final int T__18=18;
     public static final int T__13=13;
-    public static final int RULE_INT=6;
+    public static final int T__14=14;
+    public static final int EOF=-1;
+    public static final int RULE_ID=4;
     public static final int RULE_WS=11;
+    public static final int RULE_ANY_OTHER=12;
     public static final int RULE_DECIMAL=8;
+    public static final int RULE_DATE=7;
+    public static final int RULE_INT=6;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=9;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -1130,6 +1131,189 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleField"
 
+
+    // $ANTLR start "entryRuleChampionChallengerPort"
+    // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:512:1: entryRuleChampionChallengerPort returns [EObject current=null] : iv_ruleChampionChallengerPort= ruleChampionChallengerPort EOF ;
+    public final EObject entryRuleChampionChallengerPort() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleChampionChallengerPort = null;
+
+
+        try {
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:513:2: (iv_ruleChampionChallengerPort= ruleChampionChallengerPort EOF )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:514:2: iv_ruleChampionChallengerPort= ruleChampionChallengerPort EOF
+            {
+             newCompositeNode(grammarAccess.getChampionChallengerPortRule()); 
+            pushFollow(FOLLOW_ruleChampionChallengerPort_in_entryRuleChampionChallengerPort1048);
+            iv_ruleChampionChallengerPort=ruleChampionChallengerPort();
+
+            state._fsp--;
+
+             current =iv_ruleChampionChallengerPort; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleChampionChallengerPort1058); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleChampionChallengerPort"
+
+
+    // $ANTLR start "ruleChampionChallengerPort"
+    // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:521:1: ruleChampionChallengerPort returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( ( ruleFQN ) ) otherlv_3= '{' otherlv_4= 'percentage' otherlv_5= ':' ( (lv_percentage_6_0= RULE_INT ) ) otherlv_7= ';' otherlv_8= '}' ) ;
+    public final EObject ruleChampionChallengerPort() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+        Token otherlv_1=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
+        Token otherlv_5=null;
+        Token lv_percentage_6_0=null;
+        Token otherlv_7=null;
+        Token otherlv_8=null;
+
+         enterRule(); 
+            
+        try {
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:524:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( ( ruleFQN ) ) otherlv_3= '{' otherlv_4= 'percentage' otherlv_5= ':' ( (lv_percentage_6_0= RULE_INT ) ) otherlv_7= ';' otherlv_8= '}' ) )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:525:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( ( ruleFQN ) ) otherlv_3= '{' otherlv_4= 'percentage' otherlv_5= ':' ( (lv_percentage_6_0= RULE_INT ) ) otherlv_7= ';' otherlv_8= '}' )
+            {
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:525:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( ( ruleFQN ) ) otherlv_3= '{' otherlv_4= 'percentage' otherlv_5= ':' ( (lv_percentage_6_0= RULE_INT ) ) otherlv_7= ';' otherlv_8= '}' )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:525:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( ( ruleFQN ) ) otherlv_3= '{' otherlv_4= 'percentage' otherlv_5= ':' ( (lv_percentage_6_0= RULE_INT ) ) otherlv_7= ';' otherlv_8= '}'
+            {
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:525:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:526:1: (lv_name_0_0= RULE_ID )
+            {
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:526:1: (lv_name_0_0= RULE_ID )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:527:3: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleChampionChallengerPort1100); 
+
+            			newLeafNode(lv_name_0_0, grammarAccess.getChampionChallengerPortAccess().getNameIDTerminalRuleCall_0_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getChampionChallengerPortRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_0_0, 
+                    		"ID");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,20,FOLLOW_20_in_ruleChampionChallengerPort1117); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getChampionChallengerPortAccess().getColonKeyword_1());
+                
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:547:1: ( ( ruleFQN ) )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:548:1: ( ruleFQN )
+            {
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:548:1: ( ruleFQN )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:549:3: ruleFQN
+            {
+
+            			if (current==null) {
+            	            current = createModelElement(grammarAccess.getChampionChallengerPortRule());
+            	        }
+                    
+             
+            	        newCompositeNode(grammarAccess.getChampionChallengerPortAccess().getTypeDataTypeCrossReference_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleFQN_in_ruleChampionChallengerPort1140);
+            ruleFQN();
+
+            state._fsp--;
+
+             
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            otherlv_3=(Token)match(input,18,FOLLOW_18_in_ruleChampionChallengerPort1152); 
+
+                	newLeafNode(otherlv_3, grammarAccess.getChampionChallengerPortAccess().getLeftCurlyBracketKeyword_3());
+                
+            otherlv_4=(Token)match(input,25,FOLLOW_25_in_ruleChampionChallengerPort1164); 
+
+                	newLeafNode(otherlv_4, grammarAccess.getChampionChallengerPortAccess().getPercentageKeyword_4());
+                
+            otherlv_5=(Token)match(input,20,FOLLOW_20_in_ruleChampionChallengerPort1176); 
+
+                	newLeafNode(otherlv_5, grammarAccess.getChampionChallengerPortAccess().getColonKeyword_5());
+                
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:574:1: ( (lv_percentage_6_0= RULE_INT ) )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:575:1: (lv_percentage_6_0= RULE_INT )
+            {
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:575:1: (lv_percentage_6_0= RULE_INT )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:576:3: lv_percentage_6_0= RULE_INT
+            {
+            lv_percentage_6_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleChampionChallengerPort1193); 
+
+            			newLeafNode(lv_percentage_6_0, grammarAccess.getChampionChallengerPortAccess().getPercentageINTTerminalRuleCall_6_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getChampionChallengerPortRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"percentage",
+                    		lv_percentage_6_0, 
+                    		"INT");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_7=(Token)match(input,14,FOLLOW_14_in_ruleChampionChallengerPort1210); 
+
+                	newLeafNode(otherlv_7, grammarAccess.getChampionChallengerPortAccess().getSemicolonKeyword_7());
+                
+            otherlv_8=(Token)match(input,19,FOLLOW_19_in_ruleChampionChallengerPort1222); 
+
+                	newLeafNode(otherlv_8, grammarAccess.getChampionChallengerPortAccess().getRightCurlyBracketKeyword_8());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleChampionChallengerPort"
+
     // Delegated rules
 
 
@@ -1179,5 +1363,16 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_24_in_ruleField976 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleField988 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_14_in_ruleField1009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleChampionChallengerPort_in_entryRuleChampionChallengerPort1048 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleChampionChallengerPort1058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleChampionChallengerPort1100 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleChampionChallengerPort1117 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleFQN_in_ruleChampionChallengerPort1140 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleChampionChallengerPort1152 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleChampionChallengerPort1164 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleChampionChallengerPort1176 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleChampionChallengerPort1193 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleChampionChallengerPort1210 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleChampionChallengerPort1222 = new BitSet(new long[]{0x0000000000000002L});
 
 }

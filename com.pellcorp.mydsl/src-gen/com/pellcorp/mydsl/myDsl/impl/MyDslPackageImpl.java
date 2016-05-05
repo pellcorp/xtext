@@ -3,6 +3,8 @@
 package com.pellcorp.mydsl.myDsl.impl;
 
 import com.pellcorp.mydsl.myDsl.BuiltInType;
+import com.pellcorp.mydsl.myDsl.ChampionChallenger;
+import com.pellcorp.mydsl.myDsl.ChampionChallengerPort;
 import com.pellcorp.mydsl.myDsl.DataType;
 import com.pellcorp.mydsl.myDsl.Entity;
 import com.pellcorp.mydsl.myDsl.Field;
@@ -59,6 +61,20 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    * @generated
    */
   private EClass fieldEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass championChallengerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass championChallengerPortEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -318,6 +334,96 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getChampionChallenger()
+  {
+    return championChallengerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChampionChallenger_Name()
+  {
+    return (EAttribute)championChallengerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChampionChallenger_Description()
+  {
+    return (EAttribute)championChallengerEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getChampionChallenger_ChampionPort()
+  {
+    return (EReference)championChallengerEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getChampionChallenger_ChallengerPorts()
+  {
+    return (EReference)championChallengerEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getChampionChallengerPort()
+  {
+    return championChallengerPortEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChampionChallengerPort_Name()
+  {
+    return (EAttribute)championChallengerPortEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getChampionChallengerPort_Type()
+  {
+    return (EReference)championChallengerPortEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChampionChallengerPort_Percentage()
+  {
+    return (EAttribute)championChallengerPortEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public MyDslFactory getMyDslFactory()
   {
     return (MyDslFactory)getEFactoryInstance();
@@ -366,6 +472,17 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
     createEAttribute(fieldEClass, FIELD__LOWER);
     createEAttribute(fieldEClass, FIELD__UPPER_UNLIMITED);
     createEAttribute(fieldEClass, FIELD__UPPER);
+
+    championChallengerEClass = createEClass(CHAMPION_CHALLENGER);
+    createEAttribute(championChallengerEClass, CHAMPION_CHALLENGER__NAME);
+    createEAttribute(championChallengerEClass, CHAMPION_CHALLENGER__DESCRIPTION);
+    createEReference(championChallengerEClass, CHAMPION_CHALLENGER__CHAMPION_PORT);
+    createEReference(championChallengerEClass, CHAMPION_CHALLENGER__CHALLENGER_PORTS);
+
+    championChallengerPortEClass = createEClass(CHAMPION_CHALLENGER_PORT);
+    createEAttribute(championChallengerPortEClass, CHAMPION_CHALLENGER_PORT__NAME);
+    createEReference(championChallengerPortEClass, CHAMPION_CHALLENGER_PORT__TYPE);
+    createEAttribute(championChallengerPortEClass, CHAMPION_CHALLENGER_PORT__PERCENTAGE);
   }
 
   /**
@@ -424,6 +541,17 @@ public class MyDslPackageImpl extends EPackageImpl implements MyDslPackage
     initEAttribute(getField_Lower(), ecorePackage.getEInt(), "lower", "1", 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getField_UpperUnlimited(), ecorePackage.getEBoolean(), "upperUnlimited", null, 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getField_Upper(), ecorePackage.getEInt(), "upper", "1", 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(championChallengerEClass, ChampionChallenger.class, "ChampionChallenger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getChampionChallenger_Name(), ecorePackage.getEString(), "name", null, 0, 1, ChampionChallenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChampionChallenger_Description(), ecorePackage.getEString(), "description", null, 0, 1, ChampionChallenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChampionChallenger_ChampionPort(), this.getChampionChallengerPort(), null, "championPort", null, 0, 1, ChampionChallenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChampionChallenger_ChallengerPorts(), this.getChampionChallengerPort(), null, "challengerPorts", null, 0, -1, ChampionChallenger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(championChallengerPortEClass, ChampionChallengerPort.class, "ChampionChallengerPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getChampionChallengerPort_Name(), ecorePackage.getEString(), "name", null, 0, 1, ChampionChallengerPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChampionChallengerPort_Type(), this.getDataType(), null, "type", null, 0, 1, ChampionChallengerPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChampionChallengerPort_Percentage(), ecorePackage.getEInt(), "percentage", null, 0, 1, ChampionChallengerPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

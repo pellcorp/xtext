@@ -30,5 +30,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Field/upperUnlimited"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Field/upper"/>
     </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ChampionChallenger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//ChampionChallenger/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//ChampionChallenger/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ChampionChallenger/championPort"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ChampionChallenger/challengerPorts"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ChampionChallengerPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//ChampionChallengerPort/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ChampionChallengerPort/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//ChampionChallengerPort/percentage"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

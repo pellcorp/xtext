@@ -1,5 +1,7 @@
 workspace Enterprise;
 entity entity0
 {
-	field0 : String field1 : String field2 : String
+	percentage : String 
+	field1 : String 
+	field2 : String
 }

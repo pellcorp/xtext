@@ -51,3 +51,17 @@ Field :
 	|	';'
 	)
 	;
+
+ChampionChallenger:
+	'champion' 'challenger' name=ID '{'
+        ('description' description=STRING ';')?
+        'champion' championPort = ChampionChallengerPort
+        ('challenger' challengerPorts+= ChampionChallengerPort)*
+    '}'
+;
+
+ChampionChallengerPort:
+    name=ID ':' type=[DataType|FQN] '{' 
+        'percentage' ':' percentage=INT ';'
+    '}'
+;

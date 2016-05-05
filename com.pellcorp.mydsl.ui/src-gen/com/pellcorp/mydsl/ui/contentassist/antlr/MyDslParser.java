@@ -51,6 +51,10 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFieldAccess().getGroup_3_0(), "rule__Field__Group_3_0__0");
 					put(grammarAccess.getFieldAccess().getGroup_3_0_0(), "rule__Field__Group_3_0_0__0");
 					put(grammarAccess.getFieldAccess().getGroup_3_0_1(), "rule__Field__Group_3_0_1__0");
+					put(grammarAccess.getChampionChallengerAccess().getGroup(), "rule__ChampionChallenger__Group__0");
+					put(grammarAccess.getChampionChallengerAccess().getGroup_4(), "rule__ChampionChallenger__Group_4__0");
+					put(grammarAccess.getChampionChallengerAccess().getGroup_7(), "rule__ChampionChallenger__Group_7__0");
+					put(grammarAccess.getChampionChallengerPortAccess().getGroup(), "rule__ChampionChallengerPort__Group__0");
 					put(grammarAccess.getModelAccess().getNameAssignment_1(), "rule__Model__NameAssignment_1");
 					put(grammarAccess.getModelAccess().getDescriptionAssignment_3_1(), "rule__Model__DescriptionAssignment_3_1");
 					put(grammarAccess.getModelAccess().getDataTypesAssignment_4(), "rule__Model__DataTypesAssignment_4");
@@ -65,6 +69,13 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFieldAccess().getLowerAssignment_3_0_1_1(), "rule__Field__LowerAssignment_3_0_1_1");
 					put(grammarAccess.getFieldAccess().getUpperUnlimitedAssignment_3_0_1_3_0(), "rule__Field__UpperUnlimitedAssignment_3_0_1_3_0");
 					put(grammarAccess.getFieldAccess().getUpperAssignment_3_0_1_3_1(), "rule__Field__UpperAssignment_3_0_1_3_1");
+					put(grammarAccess.getChampionChallengerAccess().getNameAssignment_2(), "rule__ChampionChallenger__NameAssignment_2");
+					put(grammarAccess.getChampionChallengerAccess().getDescriptionAssignment_4_1(), "rule__ChampionChallenger__DescriptionAssignment_4_1");
+					put(grammarAccess.getChampionChallengerAccess().getChampionPortAssignment_6(), "rule__ChampionChallenger__ChampionPortAssignment_6");
+					put(grammarAccess.getChampionChallengerAccess().getChallengerPortsAssignment_7_1(), "rule__ChampionChallenger__ChallengerPortsAssignment_7_1");
+					put(grammarAccess.getChampionChallengerPortAccess().getNameAssignment_0(), "rule__ChampionChallengerPort__NameAssignment_0");
+					put(grammarAccess.getChampionChallengerPortAccess().getTypeAssignment_2(), "rule__ChampionChallengerPort__TypeAssignment_2");
+					put(grammarAccess.getChampionChallengerPortAccess().getPercentageAssignment_6(), "rule__ChampionChallengerPort__PercentageAssignment_6");
 				}
 			};
 		}

@@ -313,6 +313,107 @@ public interface MyDslPackage extends EPackage
    */
   int FIELD_FEATURE_COUNT = 6;
 
+  /**
+   * The meta object id for the '{@link com.pellcorp.mydsl.myDsl.impl.ChampionChallengerImpl <em>Champion Challenger</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.pellcorp.mydsl.myDsl.impl.ChampionChallengerImpl
+   * @see com.pellcorp.mydsl.myDsl.impl.MyDslPackageImpl#getChampionChallenger()
+   * @generated
+   */
+  int CHAMPION_CHALLENGER = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER__DESCRIPTION = 1;
+
+  /**
+   * The feature id for the '<em><b>Champion Port</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER__CHAMPION_PORT = 2;
+
+  /**
+   * The feature id for the '<em><b>Challenger Ports</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER__CHALLENGER_PORTS = 3;
+
+  /**
+   * The number of structural features of the '<em>Champion Challenger</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link com.pellcorp.mydsl.myDsl.impl.ChampionChallengerPortImpl <em>Champion Challenger Port</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.pellcorp.mydsl.myDsl.impl.ChampionChallengerPortImpl
+   * @see com.pellcorp.mydsl.myDsl.impl.MyDslPackageImpl#getChampionChallengerPort()
+   * @generated
+   */
+  int CHAMPION_CHALLENGER_PORT = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER_PORT__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER_PORT__TYPE = 1;
+
+  /**
+   * The feature id for the '<em><b>Percentage</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER_PORT__PERCENTAGE = 2;
+
+  /**
+   * The number of structural features of the '<em>Champion Challenger Port</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAMPION_CHALLENGER_PORT_FEATURE_COUNT = 3;
+
 
   /**
    * Returns the meta object for class '{@link com.pellcorp.mydsl.myDsl.Model <em>Model</em>}'.
@@ -519,6 +620,103 @@ public interface MyDslPackage extends EPackage
   EAttribute getField_Upper();
 
   /**
+   * Returns the meta object for class '{@link com.pellcorp.mydsl.myDsl.ChampionChallenger <em>Champion Challenger</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Champion Challenger</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallenger
+   * @generated
+   */
+  EClass getChampionChallenger();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.pellcorp.mydsl.myDsl.ChampionChallenger#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallenger#getName()
+   * @see #getChampionChallenger()
+   * @generated
+   */
+  EAttribute getChampionChallenger_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.pellcorp.mydsl.myDsl.ChampionChallenger#getDescription <em>Description</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Description</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallenger#getDescription()
+   * @see #getChampionChallenger()
+   * @generated
+   */
+  EAttribute getChampionChallenger_Description();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.pellcorp.mydsl.myDsl.ChampionChallenger#getChampionPort <em>Champion Port</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Champion Port</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallenger#getChampionPort()
+   * @see #getChampionChallenger()
+   * @generated
+   */
+  EReference getChampionChallenger_ChampionPort();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.pellcorp.mydsl.myDsl.ChampionChallenger#getChallengerPorts <em>Challenger Ports</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Challenger Ports</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallenger#getChallengerPorts()
+   * @see #getChampionChallenger()
+   * @generated
+   */
+  EReference getChampionChallenger_ChallengerPorts();
+
+  /**
+   * Returns the meta object for class '{@link com.pellcorp.mydsl.myDsl.ChampionChallengerPort <em>Champion Challenger Port</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Champion Challenger Port</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallengerPort
+   * @generated
+   */
+  EClass getChampionChallengerPort();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.pellcorp.mydsl.myDsl.ChampionChallengerPort#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallengerPort#getName()
+   * @see #getChampionChallengerPort()
+   * @generated
+   */
+  EAttribute getChampionChallengerPort_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link com.pellcorp.mydsl.myDsl.ChampionChallengerPort#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallengerPort#getType()
+   * @see #getChampionChallengerPort()
+   * @generated
+   */
+  EReference getChampionChallengerPort_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.pellcorp.mydsl.myDsl.ChampionChallengerPort#getPercentage <em>Percentage</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Percentage</em>'.
+   * @see com.pellcorp.mydsl.myDsl.ChampionChallengerPort#getPercentage()
+   * @see #getChampionChallengerPort()
+   * @generated
+   */
+  EAttribute getChampionChallengerPort_Percentage();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -702,6 +900,82 @@ public interface MyDslPackage extends EPackage
      * @generated
      */
     EAttribute FIELD__UPPER = eINSTANCE.getField_Upper();
+
+    /**
+     * The meta object literal for the '{@link com.pellcorp.mydsl.myDsl.impl.ChampionChallengerImpl <em>Champion Challenger</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.pellcorp.mydsl.myDsl.impl.ChampionChallengerImpl
+     * @see com.pellcorp.mydsl.myDsl.impl.MyDslPackageImpl#getChampionChallenger()
+     * @generated
+     */
+    EClass CHAMPION_CHALLENGER = eINSTANCE.getChampionChallenger();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHAMPION_CHALLENGER__NAME = eINSTANCE.getChampionChallenger_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHAMPION_CHALLENGER__DESCRIPTION = eINSTANCE.getChampionChallenger_Description();
+
+    /**
+     * The meta object literal for the '<em><b>Champion Port</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHAMPION_CHALLENGER__CHAMPION_PORT = eINSTANCE.getChampionChallenger_ChampionPort();
+
+    /**
+     * The meta object literal for the '<em><b>Challenger Ports</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHAMPION_CHALLENGER__CHALLENGER_PORTS = eINSTANCE.getChampionChallenger_ChallengerPorts();
+
+    /**
+     * The meta object literal for the '{@link com.pellcorp.mydsl.myDsl.impl.ChampionChallengerPortImpl <em>Champion Challenger Port</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.pellcorp.mydsl.myDsl.impl.ChampionChallengerPortImpl
+     * @see com.pellcorp.mydsl.myDsl.impl.MyDslPackageImpl#getChampionChallengerPort()
+     * @generated
+     */
+    EClass CHAMPION_CHALLENGER_PORT = eINSTANCE.getChampionChallengerPort();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHAMPION_CHALLENGER_PORT__NAME = eINSTANCE.getChampionChallengerPort_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHAMPION_CHALLENGER_PORT__TYPE = eINSTANCE.getChampionChallengerPort_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Percentage</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHAMPION_CHALLENGER_PORT__PERCENTAGE = eINSTANCE.getChampionChallengerPort_Percentage();
 
   }
 
