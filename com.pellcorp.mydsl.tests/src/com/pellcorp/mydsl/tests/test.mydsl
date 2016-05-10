@@ -1,7 +1,7 @@
 workspace Enterprise;
-entity entity0
+entity entity
 {
-	percentage : String 
-	entity : String 
+	^percentage : String 
+	^entity : String 
 	field2 : String
 }
