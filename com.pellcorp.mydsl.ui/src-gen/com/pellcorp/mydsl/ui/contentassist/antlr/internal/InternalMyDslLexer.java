@@ -54,10 +54,11 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:11:7: ( ';' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:11:9: ';'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:11:7: ( 'percentage' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:11:9: 'percentage'
             {
-            match(';'); 
+            match("percentage"); 
+
 
             }
 
@@ -74,10 +75,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:12:7: ( 'workspace' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:12:9: 'workspace'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:12:7: ( 'entity' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:12:9: 'entity'
             {
-            match("workspace"); 
+            match("entity"); 
 
 
             }
@@ -95,11 +96,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:13:7: ( 'description' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:13:9: 'description'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:13:7: ( ';' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:13:9: ';'
             {
-            match("description"); 
-
+            match(';'); 
 
             }
 
@@ -116,10 +116,11 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:14:7: ( '.' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:14:9: '.'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:14:7: ( 'workspace' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:14:9: 'workspace'
             {
-            match('.'); 
+            match("workspace"); 
+
 
             }
 
@@ -136,10 +137,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:15:7: ( 'entity' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:15:9: 'entity'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:15:7: ( 'description' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:15:9: 'description'
             {
-            match("entity"); 
+            match("description"); 
 
 
             }
@@ -157,10 +158,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:16:7: ( '{' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:16:9: '{'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:16:7: ( '.' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:16:9: '.'
             {
-            match('{'); 
+            match('.'); 
 
             }
 
@@ -177,10 +178,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:17:7: ( '}' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:17:9: '}'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:17:7: ( '{' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:17:9: '{'
             {
-            match('}'); 
+            match('{'); 
 
             }
 
@@ -197,10 +198,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:18:7: ( ':' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:18:9: ':'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:18:7: ( '}' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:18:9: '}'
             {
-            match(':'); 
+            match('}'); 
 
             }
 
@@ -217,10 +218,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:19:7: ( '[' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:19:9: '['
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:19:7: ( ':' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:19:9: ':'
             {
-            match('['); 
+            match(':'); 
 
             }
 
@@ -237,10 +238,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:20:7: ( ',' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:20:9: ','
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:20:7: ( '[' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:20:9: '['
             {
-            match(','); 
+            match('['); 
 
             }
 
@@ -257,10 +258,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:21:7: ( ']' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:21:9: ']'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:21:7: ( ',' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:21:9: ','
             {
-            match(']'); 
+            match(','); 
 
             }
 
@@ -277,11 +278,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:22:7: ( 'percentage' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:22:9: 'percentage'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:22:7: ( ']' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:22:9: ']'
             {
-            match("percentage"); 
-
+            match(']'); 
 
             }
 
@@ -318,8 +318,8 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_DATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2052:11: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2052:13: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2112:11: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2112:13: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9' '-' '0' .. '9' '0' .. '9'
             {
             matchRange('0','9'); 
             matchRange('0','9'); 
@@ -347,10 +347,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2054:10: ( ( '-' )? ( '0' .. '9' )+ )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2054:12: ( '-' )? ( '0' .. '9' )+
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2114:10: ( ( '-' )? ( '0' .. '9' )+ )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2114:12: ( '-' )? ( '0' .. '9' )+
             {
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2054:12: ( '-' )?
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2114:12: ( '-' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -359,7 +359,7 @@ public class InternalMyDslLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2054:12: '-'
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2114:12: '-'
                     {
                     match('-'); 
 
@@ -368,7 +368,7 @@ public class InternalMyDslLexer extends Lexer {
 
             }
 
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2054:17: ( '0' .. '9' )+
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2114:17: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -382,7 +382,7 @@ public class InternalMyDslLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2054:18: '0' .. '9'
+            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2114:18: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -414,10 +414,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2056:14: ( ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2056:16: ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2116:14: ( ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2116:16: ( '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+
             {
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2056:16: ( '-' )?
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2116:16: ( '-' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -426,7 +426,7 @@ public class InternalMyDslLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2056:16: '-'
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2116:16: '-'
                     {
                     match('-'); 
 
@@ -435,7 +435,7 @@ public class InternalMyDslLexer extends Lexer {
 
             }
 
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2056:21: ( '0' .. '9' )+
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2116:21: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -449,7 +449,7 @@ public class InternalMyDslLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2056:22: '0' .. '9'
+            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2116:22: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -466,7 +466,7 @@ public class InternalMyDslLexer extends Lexer {
             } while (true);
 
             match('.'); 
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2056:37: ( '0' .. '9' )+
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2116:37: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -480,7 +480,7 @@ public class InternalMyDslLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2056:38: '0' .. '9'
+            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2116:38: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -512,10 +512,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2058:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2058:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2118:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2118:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2058:11: ( '^' )?
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2118:11: ( '^' )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -524,7 +524,7 @@ public class InternalMyDslLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2058:11: '^'
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2118:11: '^'
                     {
                     match('^'); 
 
@@ -542,7 +542,7 @@ public class InternalMyDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2058:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2118:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop7:
             do {
                 int alt7=2;
@@ -591,10 +591,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -612,10 +612,10 @@ public class InternalMyDslLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -631,7 +631,7 @@ public class InternalMyDslLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:21: '\\\\' .
+                    	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -639,7 +639,7 @@ public class InternalMyDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -664,10 +664,10 @@ public class InternalMyDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop9:
                     do {
                         int alt9=3;
@@ -683,7 +683,7 @@ public class InternalMyDslLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:54: '\\\\' .
+                    	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -691,7 +691,7 @@ public class InternalMyDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2060:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2120:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -734,12 +734,12 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2062:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2062:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2122:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2122:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2062:24: ( options {greedy=false; } : . )*
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2122:24: ( options {greedy=false; } : . )*
             loop11:
             do {
                 int alt11=2;
@@ -764,7 +764,7 @@ public class InternalMyDslLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2062:52: .
+            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2122:52: .
             	    {
             	    matchAny(); 
 
@@ -794,12 +794,12 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2064:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2064:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2124:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2124:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2064:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2124:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop12:
             do {
                 int alt12=2;
@@ -812,7 +812,7 @@ public class InternalMyDslLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2064:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2124:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -832,7 +832,7 @@ public class InternalMyDslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2064:40: ( ( '\\r' )? '\\n' )?
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2124:40: ( ( '\\r' )? '\\n' )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -841,9 +841,9 @@ public class InternalMyDslLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2064:41: ( '\\r' )? '\\n'
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2124:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2064:41: ( '\\r' )?
+                    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2124:41: ( '\\r' )?
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
@@ -852,7 +852,7 @@ public class InternalMyDslLexer extends Lexer {
                     }
                     switch (alt13) {
                         case 1 :
-                            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2064:41: '\\r'
+                            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2124:41: '\\r'
                             {
                             match('\r'); 
 
@@ -884,10 +884,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2066:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2066:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2126:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2126:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2066:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2126:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt15=0;
             loop15:
             do {
@@ -941,8 +941,8 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2068:16: ( . )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2068:18: .
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2128:16: ( . )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:2128:18: .
             {
             matchAny(); 
 
@@ -1123,23 +1123,23 @@ public class InternalMyDslLexer extends Lexer {
 
     protected DFA16 dfa16 = new DFA16(this);
     static final String DFA16_eotS =
-        "\2\uffff\2\31\1\uffff\1\31\6\uffff\1\31\1\uffff\1\47\2\26\1\uffff\3\26\3\uffff\1\31\1\uffff\1\31\1\uffff\1\31\6\uffff\1\31\1\uffff\1\47\2\uffff\1\47\4\uffff\4\31\1\47\4\31\1\47\4\31\1\uffff\2\31\1\102\3\31\1\uffff\4\31\1\112\2\31\1\uffff\1\31\1\116\1\117\2\uffff";
+        "\1\uffff\2\30\1\uffff\2\30\10\uffff\1\47\2\26\1\uffff\3\26\2\uffff\1\30\1\uffff\1\30\1\uffff\2\30\10\uffff\1\47\2\uffff\1\47\4\uffff\4\30\1\47\4\30\1\47\4\30\1\uffff\1\30\1\101\3\30\1\uffff\6\30\1\113\1\30\1\115\1\uffff\1\30\1\uffff\1\117\1\uffff";
     static final String DFA16_eofS =
         "\120\uffff";
     static final String DFA16_minS =
-        "\1\0\1\uffff\1\157\1\145\1\uffff\1\156\6\uffff\1\145\1\uffff\1\56\1\60\1\101\1\uffff\2\0\1\52\3\uffff\1\162\1\uffff\1\163\1\uffff\1\164\6\uffff\1\162\1\uffff\1\56\2\uffff\1\56\4\uffff\1\153\1\143\1\151\1\143\1\56\1\163\1\162\1\164\1\145\1\55\1\160\1\151\1\171\1\156\1\uffff\1\141\1\160\1\60\1\164\1\143\1\164\1\uffff\1\141\1\145\1\151\1\147\1\60\1\157\1\145\1\uffff\1\156\2\60\2\uffff";
+        "\1\0\1\145\1\156\1\uffff\1\157\1\145\10\uffff\1\56\1\60\1\101\1\uffff\2\0\1\52\2\uffff\1\162\1\uffff\1\164\1\uffff\1\162\1\163\10\uffff\1\56\2\uffff\1\56\4\uffff\1\143\1\151\1\153\1\143\1\56\1\145\1\164\1\163\1\162\1\55\1\156\1\171\1\160\1\151\1\uffff\1\164\1\60\1\141\1\160\1\141\1\uffff\1\143\1\164\1\147\1\145\1\151\1\145\1\60\1\157\1\60\1\uffff\1\156\1\uffff\1\60\1\uffff";
     static final String DFA16_maxS =
-        "\1\uffff\1\uffff\1\157\1\145\1\uffff\1\156\6\uffff\1\145\1\uffff\2\71\1\172\1\uffff\2\uffff\1\57\3\uffff\1\162\1\uffff\1\163\1\uffff\1\164\6\uffff\1\162\1\uffff\1\71\2\uffff\1\71\4\uffff\1\153\1\143\1\151\1\143\1\71\1\163\1\162\1\164\1\145\1\71\1\160\1\151\1\171\1\156\1\uffff\1\141\1\160\1\172\1\164\1\143\1\164\1\uffff\1\141\1\145\1\151\1\147\1\172\1\157\1\145\1\uffff\1\156\2\172\2\uffff";
+        "\1\uffff\1\145\1\156\1\uffff\1\157\1\145\10\uffff\2\71\1\172\1\uffff\2\uffff\1\57\2\uffff\1\162\1\uffff\1\164\1\uffff\1\162\1\163\10\uffff\1\71\2\uffff\1\71\4\uffff\1\143\1\151\1\153\1\143\1\71\1\145\1\164\1\163\1\162\1\71\1\156\1\171\1\160\1\151\1\uffff\1\164\1\172\1\141\1\160\1\141\1\uffff\1\143\1\164\1\147\1\145\1\151\1\145\1\172\1\157\1\172\1\uffff\1\156\1\uffff\1\172\1\uffff";
     static final String DFA16_acceptS =
-        "\1\uffff\1\1\2\uffff\1\4\1\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\uffff\1\15\3\uffff\1\21\3\uffff\1\25\1\26\1\1\1\uffff\1\21\1\uffff\1\4\1\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\uffff\1\15\1\uffff\1\20\1\17\1\uffff\1\22\1\23\1\24\1\25\16\uffff\1\16\6\uffff\1\5\7\uffff\1\2\3\uffff\1\14\1\3";
+        "\3\uffff\1\3\2\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\3\uffff\1\21\3\uffff\1\25\1\26\1\uffff\1\21\1\uffff\1\3\2\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\uffff\1\20\1\17\1\uffff\1\22\1\23\1\24\1\25\16\uffff\1\16\5\uffff\1\2\11\uffff\1\4\1\uffff\1\1\1\uffff\1\5";
     static final String DFA16_specialS =
         "\1\0\21\uffff\1\1\1\2\74\uffff}>";
     static final String[] DFA16_transitionS = {
-            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\2\26\1\15\1\26\1\12\1\17\1\4\1\24\12\16\1\10\1\1\5\26\32\21\1\11\1\26\1\13\1\20\1\21\1\26\3\21\1\3\1\5\12\21\1\14\6\21\1\2\3\21\1\6\1\26\1\7\uff82\26",
+            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\2\26\1\15\1\26\1\13\1\17\1\6\1\24\12\16\1\11\1\3\5\26\32\21\1\12\1\26\1\14\1\20\1\21\1\26\3\21\1\5\1\2\12\21\1\1\6\21\1\4\3\21\1\7\1\26\1\10\uff82\26",
+            "\1\27",
+            "\1\31",
             "",
-            "\1\30",
-            "\1\32",
-            "",
+            "\1\33",
             "\1\34",
             "",
             "",
@@ -1147,16 +1147,15 @@ public class InternalMyDslLexer extends Lexer {
             "",
             "",
             "",
-            "\1\43",
+            "",
             "",
             "\1\46\1\uffff\12\45",
             "\12\50",
-            "\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
             "\0\51",
             "\0\51",
             "\1\52\4\uffff\1\53",
-            "",
             "",
             "",
             "\1\55",
@@ -1164,13 +1163,14 @@ public class InternalMyDslLexer extends Lexer {
             "\1\56",
             "",
             "\1\57",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\60",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "",
             "\1\46\1\uffff\12\61",
             "",
@@ -1196,24 +1196,24 @@ public class InternalMyDslLexer extends Lexer {
             "\1\77",
             "",
             "\1\100",
-            "\1\101",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\102",
             "\1\103",
             "\1\104",
-            "\1\105",
             "",
+            "\1\105",
             "\1\106",
             "\1\107",
             "\1\110",
             "\1\111",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\113",
+            "\1\112",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "\1\114",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
-            "\1\115",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\116",
             "",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             ""
     };
 
@@ -1257,29 +1257,29 @@ public class InternalMyDslLexer extends Lexer {
                         int LA16_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA16_0==';') ) {s = 1;}
+                        if ( (LA16_0=='p') ) {s = 1;}
 
-                        else if ( (LA16_0=='w') ) {s = 2;}
+                        else if ( (LA16_0=='e') ) {s = 2;}
 
-                        else if ( (LA16_0=='d') ) {s = 3;}
+                        else if ( (LA16_0==';') ) {s = 3;}
 
-                        else if ( (LA16_0=='.') ) {s = 4;}
+                        else if ( (LA16_0=='w') ) {s = 4;}
 
-                        else if ( (LA16_0=='e') ) {s = 5;}
+                        else if ( (LA16_0=='d') ) {s = 5;}
 
-                        else if ( (LA16_0=='{') ) {s = 6;}
+                        else if ( (LA16_0=='.') ) {s = 6;}
 
-                        else if ( (LA16_0=='}') ) {s = 7;}
+                        else if ( (LA16_0=='{') ) {s = 7;}
 
-                        else if ( (LA16_0==':') ) {s = 8;}
+                        else if ( (LA16_0=='}') ) {s = 8;}
 
-                        else if ( (LA16_0=='[') ) {s = 9;}
+                        else if ( (LA16_0==':') ) {s = 9;}
 
-                        else if ( (LA16_0==',') ) {s = 10;}
+                        else if ( (LA16_0=='[') ) {s = 10;}
 
-                        else if ( (LA16_0==']') ) {s = 11;}
+                        else if ( (LA16_0==',') ) {s = 11;}
 
-                        else if ( (LA16_0=='p') ) {s = 12;}
+                        else if ( (LA16_0==']') ) {s = 12;}
 
                         else if ( (LA16_0=='*') ) {s = 13;}
 

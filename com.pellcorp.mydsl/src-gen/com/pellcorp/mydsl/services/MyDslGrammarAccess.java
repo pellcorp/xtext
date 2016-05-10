@@ -74,33 +74,57 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getDataTypesEntityParserRuleCall_4_0() { return cDataTypesEntityParserRuleCall_4_0; }
 	}
 
-	public class FQNElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FQN");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+	public class MyIDElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MyID");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Keyword cPercentageKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cEntityKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
 		
-		//// fully qualified name
-		//FQN:
-		//	ID ("." ID)*;
+		//MyID:
+		//	ID | "percentage" | "entity";
 		@Override public ParserRule getRule() { return rule; }
 
-		//ID ("." ID)*
-		public Group getGroup() { return cGroup; }
+		//ID | "percentage" | "entity"
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
 
-		//("." ID)*
+		//"percentage"
+		public Keyword getPercentageKeyword_1() { return cPercentageKeyword_1; }
+
+		//"entity"
+		public Keyword getEntityKeyword_2() { return cEntityKeyword_2; }
+	}
+
+	public class FQNElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FQN");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cMyIDParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cMyIDParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//// fully qualified name
+		//FQN:
+		//	MyID ("." MyID)*;
+		@Override public ParserRule getRule() { return rule; }
+
+		//MyID ("." MyID)*
+		public Group getGroup() { return cGroup; }
+
+		//MyID
+		public RuleCall getMyIDParserRuleCall_0() { return cMyIDParserRuleCall_0; }
+
+		//("." MyID)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"."
 		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+		//MyID
+		public RuleCall getMyIDParserRuleCall_1_1() { return cMyIDParserRuleCall_1_1; }
 	}
 
 	public class DataTypeElements extends AbstractParserRuleElementFinder {
@@ -131,7 +155,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEntityKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameMyIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cDescriptionKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
@@ -143,22 +167,22 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Entity:
-		//	"entity" name=ID "{" ("description" description=STRING ";")? fields+=Field* // MULTI-VALIDATION warn if fields.size==0
+		//	"entity" name=MyID "{" ("description" description=STRING ";")? fields+=Field* // MULTI-VALIDATION warn if fields.size==0
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"entity" name=ID "{" ("description" description=STRING ";")? fields+=Field* // MULTI-VALIDATION warn if fields.size==0
+		//"entity" name=MyID "{" ("description" description=STRING ";")? fields+=Field* // MULTI-VALIDATION warn if fields.size==0
 		//"}"
 		public Group getGroup() { return cGroup; }
 
 		//"entity"
 		public Keyword getEntityKeyword_0() { return cEntityKeyword_0; }
 
-		//name=ID
+		//name=MyID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//MyID
+		public RuleCall getNameMyIDParserRuleCall_1_0() { return cNameMyIDParserRuleCall_1_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -192,23 +216,23 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BuiltInType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cNameMyIDParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Assignment cDescriptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_1_0 = (RuleCall)cDescriptionAssignment_1.eContents().get(0);
 		
 		//// Only instantiated "behind the scenes", i.e. no keyword, not called as a rule
 		//BuiltInType:
-		//	name=ID description=STRING;
+		//	name=MyID description=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=ID description=STRING
+		//name=MyID description=STRING
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
+		//name=MyID
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		//MyID
+		public RuleCall getNameMyIDParserRuleCall_0_0() { return cNameMyIDParserRuleCall_0_0; }
 
 		//description=STRING
 		public Assignment getDescriptionAssignment_1() { return cDescriptionAssignment_1; }
@@ -221,7 +245,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Field");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cNameMyIDParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cTypeDataTypeCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
@@ -248,21 +272,21 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3_1 = (Keyword)cAlternatives_3.eContents().get(1);
 		
 		//Field:
-		//	name=ID ":" type=[DataType|FQN] (("description" description=STRING ";")? ("[" lower=INT "," (upperUnlimited?="*" |
+		//	name=MyID ":" type=[DataType|FQN] (("description" description=STRING ";")? ("[" lower=INT "," (upperUnlimited?="*" |
 		//	upper=INT) "]" ";")? // default values: lower=1 and upper=1 set via PostProcessor
 		//	| ";");
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=ID ":" type=[DataType|FQN] (("description" description=STRING ";")? ("[" lower=INT "," (upperUnlimited?="*" |
+		//name=MyID ":" type=[DataType|FQN] (("description" description=STRING ";")? ("[" lower=INT "," (upperUnlimited?="*" |
 		//upper=INT) "]" ";")? // default values: lower=1 and upper=1 set via PostProcessor
 		//| ";")
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
+		//name=MyID
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		//MyID
+		public RuleCall getNameMyIDParserRuleCall_0_0() { return cNameMyIDParserRuleCall_0_0; }
 
 		//":"
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
@@ -344,7 +368,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cChampionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cChallengerKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameMyIDParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cDescriptionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
@@ -361,11 +385,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//ChampionChallenger:
-		//	"champion" "challenger" name=ID "{" ("description" description=STRING ";")? "champion"
+		//	"champion" "challenger" name=MyID "{" ("description" description=STRING ";")? "champion"
 		//	championPort=ChampionChallengerPort ("challenger" challengerPorts+=ChampionChallengerPort)* "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"champion" "challenger" name=ID "{" ("description" description=STRING ";")? "champion"
+		//"champion" "challenger" name=MyID "{" ("description" description=STRING ";")? "champion"
 		//championPort=ChampionChallengerPort ("challenger" challengerPorts+=ChampionChallengerPort)* "}"
 		public Group getGroup() { return cGroup; }
 
@@ -375,11 +399,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"challenger"
 		public Keyword getChallengerKeyword_1() { return cChallengerKeyword_1; }
 
-		//name=ID
+		//name=MyID
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		//MyID
+		public RuleCall getNameMyIDParserRuleCall_2_0() { return cNameMyIDParserRuleCall_2_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
@@ -428,7 +452,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChampionChallengerPort");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cNameMyIDParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cTypeDataTypeCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
@@ -442,17 +466,17 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//ChampionChallengerPort:
-		//	name=ID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}";
+		//	name=MyID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=ID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}"
+		//name=MyID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}"
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
+		//name=MyID
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		//MyID
+		public RuleCall getNameMyIDParserRuleCall_0_0() { return cNameMyIDParserRuleCall_0_0; }
 
 		//":"
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
@@ -493,6 +517,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tDATE;
 	private final TerminalRule tINT;
 	private final TerminalRule tDECIMAL;
+	private final MyIDElements pMyID;
 	private final FQNElements pFQN;
 	private final DataTypeElements pDataType;
 	private final EntityElements pEntity;
@@ -514,6 +539,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.tDATE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DATE");
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT");
 		this.tDECIMAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DECIMAL");
+		this.pMyID = new MyIDElements();
 		this.pFQN = new FQNElements();
 		this.pDataType = new DataTypeElements();
 		this.pEntity = new EntityElements();
@@ -580,9 +606,19 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		return tDECIMAL;
 	} 
 
+	//MyID:
+	//	ID | "percentage" | "entity";
+	public MyIDElements getMyIDAccess() {
+		return pMyID;
+	}
+	
+	public ParserRule getMyIDRule() {
+		return getMyIDAccess().getRule();
+	}
+
 	//// fully qualified name
 	//FQN:
-	//	ID ("." ID)*;
+	//	MyID ("." MyID)*;
 	public FQNElements getFQNAccess() {
 		return pFQN;
 	}
@@ -605,7 +641,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entity:
-	//	"entity" name=ID "{" ("description" description=STRING ";")? fields+=Field* // MULTI-VALIDATION warn if fields.size==0
+	//	"entity" name=MyID "{" ("description" description=STRING ";")? fields+=Field* // MULTI-VALIDATION warn if fields.size==0
 	//	"}";
 	public EntityElements getEntityAccess() {
 		return pEntity;
@@ -617,7 +653,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// Only instantiated "behind the scenes", i.e. no keyword, not called as a rule
 	//BuiltInType:
-	//	name=ID description=STRING;
+	//	name=MyID description=STRING;
 	public BuiltInTypeElements getBuiltInTypeAccess() {
 		return pBuiltInType;
 	}
@@ -627,7 +663,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Field:
-	//	name=ID ":" type=[DataType|FQN] (("description" description=STRING ";")? ("[" lower=INT "," (upperUnlimited?="*" |
+	//	name=MyID ":" type=[DataType|FQN] (("description" description=STRING ";")? ("[" lower=INT "," (upperUnlimited?="*" |
 	//	upper=INT) "]" ";")? // default values: lower=1 and upper=1 set via PostProcessor
 	//	| ";");
 	public FieldElements getFieldAccess() {
@@ -639,7 +675,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChampionChallenger:
-	//	"champion" "challenger" name=ID "{" ("description" description=STRING ";")? "champion"
+	//	"champion" "challenger" name=MyID "{" ("description" description=STRING ";")? "champion"
 	//	championPort=ChampionChallengerPort ("challenger" challengerPorts+=ChampionChallengerPort)* "}";
 	public ChampionChallengerElements getChampionChallengerAccess() {
 		return pChampionChallenger;
@@ -650,7 +686,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChampionChallengerPort:
-	//	name=ID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}";
+	//	name=MyID ":" type=[DataType|FQN] "{" "percentage" ":" percentage=INT ";" "}";
 	public ChampionChallengerPortElements getChampionChallengerPortAccess() {
 		return pChampionChallengerPort;
 	}

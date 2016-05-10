@@ -143,11 +143,6 @@ public abstract class AbstractMyDslRuntimeModule extends org.eclipse.xtext.commo
 		return com.pellcorp.mydsl.generator.MyDslGenerator.class;
 	}
 
-	// contributed by org.eclipse.xtext.generator.formatting.FormatterFragment
-	public Class<? extends org.eclipse.xtext.formatting.IFormatter> bindIFormatter() {
-		return com.pellcorp.mydsl.formatting.MyDslFormatter.class;
-	}
-
 	// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
 	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
 		return org.eclipse.xtext.common.types.xtext.TypesAwareDefaultGlobalScopeProvider.class;

@@ -18,9 +18,11 @@ terminal DATE returns ecore::EDate: '0'..'9''0'..'9''0'..'9''0'..'9' '-' '0'..'9
 terminal INT returns ecore::EInt: ('-')? ('0'..'9')+;
 terminal DECIMAL returns ecore::EBigDecimal: 
 		'-'? ('0'..'9')+ '.' ('0'..'9')+;
-      
+
+MyID: ID | "percentage" | "entity";
+
 FQN: // fully qualified name
-	ID ('.' ID)*
+	MyID ('.' MyID)*
 	;
 
 //
@@ -31,7 +33,7 @@ DataType:
 	;
 
 Entity :
-	'entity' name=ID '{'
+	'entity' name=MyID '{'
 		('description' description=STRING ';')?
 		(fields+=Field)*  // MULTI-VALIDATION warn if fields.size==0
 	'}'
@@ -40,11 +42,11 @@ Entity :
 	
 // Only instantiated "behind the scenes", i.e. no keyword, not called as a rule
 BuiltInType:
-	name=ID description=STRING
+	name=MyID description=STRING
 	;
 		
 Field : 
-	name=ID ':' type=[DataType|FQN]
+	name=MyID ':' type=[DataType|FQN]
 	(	('description' description=STRING ';')?
 		('[' lower=INT ',' (upperUnlimited?='*' | upper=INT) ']' ';')?
 		// default values: lower=1 and upper=1 set via PostProcessor
@@ -53,7 +55,7 @@ Field :
 	;
 
 ChampionChallenger:
-	'champion' 'challenger' name=ID '{'
+	'champion' 'challenger' name=MyID '{'
         ('description' description=STRING ';')?
         'champion' championPort = ChampionChallengerPort
         ('challenger' challengerPorts+= ChampionChallengerPort)*
@@ -61,7 +63,7 @@ ChampionChallenger:
 ;
 
 ChampionChallengerPort:
-    name=ID ':' type=[DataType|FQN] '{' 
+    name=MyID ':' type=[DataType|FQN] '{' 
         'percentage' ':' percentage=INT ';'
     '}'
 ;

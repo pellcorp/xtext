@@ -37,6 +37,7 @@ public class MyDslParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getMyIDAccess().getAlternatives(), "rule__MyID__Alternatives");
 					put(grammarAccess.getDataTypeAccess().getAlternatives(), "rule__DataType__Alternatives");
 					put(grammarAccess.getFieldAccess().getAlternatives_3(), "rule__Field__Alternatives_3");
 					put(grammarAccess.getFieldAccess().getAlternatives_3_0_1_3(), "rule__Field__Alternatives_3_0_1_3");

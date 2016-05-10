@@ -154,6 +154,48 @@ ruleModel returns [EObject current=null]
 
 
 
+// Entry rule entryRuleMyID
+entryRuleMyID returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMyIDRule()); } 
+	 iv_ruleMyID=ruleMyID 
+	 { $current=$iv_ruleMyID.current.getText(); }  
+	 EOF 
+;
+
+// Rule MyID
+ruleMyID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(    this_ID_0=RULE_ID    {
+		$current.merge(this_ID_0);
+    }
+
+    { 
+    newLeafNode(this_ID_0, grammarAccess.getMyIDAccess().getIDTerminalRuleCall_0()); 
+    }
+
+    |
+	kw='percentage' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getMyIDAccess().getPercentageKeyword_1()); 
+    }
+
+    |
+	kw='entity' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getMyIDAccess().getEntityKeyword_2()); 
+    }
+)
+    ;
+
+
+
+
+
 // Entry rule entryRuleFQN
 entryRuleFQN returns [String current=null] 
 	:
@@ -168,12 +210,16 @@ ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(    this_ID_0=RULE_ID    {
-		$current.merge(this_ID_0);
+(
+    { 
+        newCompositeNode(grammarAccess.getFQNAccess().getMyIDParserRuleCall_0()); 
+    }
+    this_MyID_0=ruleMyID    {
+		$current.merge(this_MyID_0);
     }
 
     { 
-    newLeafNode(this_ID_0, grammarAccess.getFQNAccess().getIDTerminalRuleCall_0()); 
+        afterParserOrEnumRuleCall();
     }
 (
 	kw='.' 
@@ -181,12 +227,16 @@ ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getFQNAccess().getFullStopKeyword_1_0()); 
     }
-    this_ID_2=RULE_ID    {
-		$current.merge(this_ID_2);
+
+    { 
+        newCompositeNode(grammarAccess.getFQNAccess().getMyIDParserRuleCall_1_1()); 
+    }
+    this_MyID_2=ruleMyID    {
+		$current.merge(this_MyID_2);
     }
 
     { 
-    newLeafNode(this_ID_2, grammarAccess.getFQNAccess().getIDTerminalRuleCall_1_1()); 
+        afterParserOrEnumRuleCall();
     }
 )*)
     ;
@@ -217,19 +267,19 @@ ruleEntity returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getEntityAccess().getNameMyIDParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleMyID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getEntityRule());
+	            $current = createModelElementForParent(grammarAccess.getEntityRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"MyID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -308,19 +358,19 @@ ruleBuiltInType returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getBuiltInTypeAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getBuiltInTypeAccess().getNameMyIDParserRuleCall_0_0()); 
+	    }
+		lv_name_0_0=ruleMyID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getBuiltInTypeRule());
+	            $current = createModelElementForParent(grammarAccess.getBuiltInTypeRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_0_0, 
-        		"ID");
+        		"MyID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -365,19 +415,19 @@ ruleField returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getFieldAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getFieldAccess().getNameMyIDParserRuleCall_0_0()); 
+	    }
+		lv_name_0_0=ruleMyID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getFieldRule());
+	            $current = createModelElementForParent(grammarAccess.getFieldRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_0_0, 
-        		"ID");
+        		"MyID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -524,19 +574,19 @@ ruleChampionChallengerPort returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getChampionChallengerPortAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getChampionChallengerPortAccess().getNameMyIDParserRuleCall_0_0()); 
+	    }
+		lv_name_0_0=ruleMyID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getChampionChallengerPortRule());
+	            $current = createModelElementForParent(grammarAccess.getChampionChallengerPortRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_0_0, 
-        		"ID");
+        		"MyID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )

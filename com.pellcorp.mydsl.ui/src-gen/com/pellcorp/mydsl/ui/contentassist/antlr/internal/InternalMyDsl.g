@@ -84,6 +84,34 @@ finally {
 
 
 
+// Entry rule entryRuleMyID
+entryRuleMyID 
+:
+{ before(grammarAccess.getMyIDRule()); }
+	 ruleMyID
+{ after(grammarAccess.getMyIDRule()); } 
+	 EOF 
+;
+
+// Rule MyID
+ruleMyID
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getMyIDAccess().getAlternatives()); }
+(rule__MyID__Alternatives)
+{ after(grammarAccess.getMyIDAccess().getAlternatives()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleFQN
 entryRuleFQN 
 :
@@ -228,6 +256,38 @@ finally {
 
 
 
+
+rule__MyID__Alternatives
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMyIDAccess().getIDTerminalRuleCall_0()); }
+	RULE_ID
+{ after(grammarAccess.getMyIDAccess().getIDTerminalRuleCall_0()); }
+)
+
+    |(
+{ before(grammarAccess.getMyIDAccess().getPercentageKeyword_1()); }
+
+	'percentage' 
+
+{ after(grammarAccess.getMyIDAccess().getPercentageKeyword_1()); }
+)
+
+    |(
+{ before(grammarAccess.getMyIDAccess().getEntityKeyword_2()); }
+
+	'entity' 
+
+{ after(grammarAccess.getMyIDAccess().getEntityKeyword_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 
 rule__Field__Alternatives_3
@@ -550,9 +610,9 @@ rule__FQN__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getFQNAccess().getIDTerminalRuleCall_0()); }
-	RULE_ID
-{ after(grammarAccess.getFQNAccess().getIDTerminalRuleCall_0()); }
+{ before(grammarAccess.getFQNAccess().getMyIDParserRuleCall_0()); }
+	ruleMyID
+{ after(grammarAccess.getFQNAccess().getMyIDParserRuleCall_0()); }
 )
 
 ;
@@ -641,9 +701,9 @@ rule__FQN__Group_1__1__Impl
     }
 :
 (
-{ before(grammarAccess.getFQNAccess().getIDTerminalRuleCall_1_1()); }
-	RULE_ID
-{ after(grammarAccess.getFQNAccess().getIDTerminalRuleCall_1_1()); }
+{ before(grammarAccess.getFQNAccess().getMyIDParserRuleCall_1_1()); }
+	ruleMyID
+{ after(grammarAccess.getFQNAccess().getMyIDParserRuleCall_1_1()); }
 )
 
 ;
@@ -1824,8 +1884,8 @@ rule__Entity__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); }
-	RULE_ID{ after(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getEntityAccess().getNameMyIDParserRuleCall_1_0()); }
+	ruleMyID{ after(grammarAccess.getEntityAccess().getNameMyIDParserRuleCall_1_0()); }
 )
 
 ;
@@ -1869,8 +1929,8 @@ rule__BuiltInType__NameAssignment_0
     }
 :
 (
-{ before(grammarAccess.getBuiltInTypeAccess().getNameIDTerminalRuleCall_0_0()); }
-	RULE_ID{ after(grammarAccess.getBuiltInTypeAccess().getNameIDTerminalRuleCall_0_0()); }
+{ before(grammarAccess.getBuiltInTypeAccess().getNameMyIDParserRuleCall_0_0()); }
+	ruleMyID{ after(grammarAccess.getBuiltInTypeAccess().getNameMyIDParserRuleCall_0_0()); }
 )
 
 ;
@@ -1899,8 +1959,8 @@ rule__Field__NameAssignment_0
     }
 :
 (
-{ before(grammarAccess.getFieldAccess().getNameIDTerminalRuleCall_0_0()); }
-	RULE_ID{ after(grammarAccess.getFieldAccess().getNameIDTerminalRuleCall_0_0()); }
+{ before(grammarAccess.getFieldAccess().getNameMyIDParserRuleCall_0_0()); }
+	ruleMyID{ after(grammarAccess.getFieldAccess().getNameMyIDParserRuleCall_0_0()); }
 )
 
 ;
@@ -2005,8 +2065,8 @@ rule__ChampionChallengerPort__NameAssignment_0
     }
 :
 (
-{ before(grammarAccess.getChampionChallengerPortAccess().getNameIDTerminalRuleCall_0_0()); }
-	RULE_ID{ after(grammarAccess.getChampionChallengerPortAccess().getNameIDTerminalRuleCall_0_0()); }
+{ before(grammarAccess.getChampionChallengerPortAccess().getNameMyIDParserRuleCall_0_0()); }
+	ruleMyID{ after(grammarAccess.getChampionChallengerPortAccess().getNameMyIDParserRuleCall_0_0()); }
 )
 
 ;

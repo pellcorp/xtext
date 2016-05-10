@@ -4,7 +4,7 @@
     editorDirectory="/com.pellcorp.mydsl.editor/src" modelPluginID="com.pellcorp.mydsl"
     forceOverwrite="true" modelName="MyDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="6.0" copyrightFields="false" editPluginID="com.pellcorp.mydsl.edit"
-    editorPluginID="com.pellcorp.mydsl.editor" runtimeVersion="2.10">
+    editorPluginID="com.pellcorp.mydsl.editor" runtimeVersion="2.11">
   <genPackages prefix="MyDsl" basePackage="com.pellcorp.mydsl" disposableProviderFactory="true"
       fileExtensions="mydsl" ecorePackage="MyDsl.ecore#/">
     <genClasses ecoreClass="MyDsl.ecore#//Model">

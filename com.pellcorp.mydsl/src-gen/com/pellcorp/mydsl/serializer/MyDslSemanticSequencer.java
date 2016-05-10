@@ -58,7 +58,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID description=STRING)
+	 *     (name=MyID description=STRING)
 	 */
 	protected void sequence_BuiltInType(EObject context, BuiltInType semanticObject) {
 		if(errorAcceptor != null) {
@@ -69,7 +69,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getBuiltInTypeAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getBuiltInTypeAccess().getNameMyIDParserRuleCall_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getBuiltInTypeAccess().getDescriptionSTRINGTerminalRuleCall_1_0(), semanticObject.getDescription());
 		feeder.finish();
 	}
@@ -77,7 +77,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID type=[DataType|FQN] percentage=INT)
+	 *     (name=MyID type=[DataType|FQN] percentage=INT)
 	 */
 	protected void sequence_ChampionChallengerPort(EObject context, ChampionChallengerPort semanticObject) {
 		if(errorAcceptor != null) {
@@ -90,7 +90,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getChampionChallengerPortAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getChampionChallengerPortAccess().getNameMyIDParserRuleCall_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getChampionChallengerPortAccess().getTypeDataTypeFQNParserRuleCall_2_0_1(), semanticObject.getType());
 		feeder.accept(grammarAccess.getChampionChallengerPortAccess().getPercentageINTTerminalRuleCall_6_0(), semanticObject.getPercentage());
 		feeder.finish();
@@ -99,7 +99,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID description=STRING? championPort=ChampionChallengerPort challengerPorts+=ChampionChallengerPort*)
+	 *     (name=MyID description=STRING? championPort=ChampionChallengerPort challengerPorts+=ChampionChallengerPort*)
 	 */
 	protected void sequence_ChampionChallenger(EObject context, ChampionChallenger semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -108,7 +108,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID description=STRING? fields+=Field*)
+	 *     (name=MyID description=STRING? fields+=Field*)
 	 */
 	protected void sequence_Entity(EObject context, Entity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -117,7 +117,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID type=[DataType|FQN] (description=STRING? (lower=INT (upperUnlimited?='*' | upper=INT))?)?)
+	 *     (name=MyID type=[DataType|FQN] (description=STRING? (lower=INT (upperUnlimited?='*' | upper=INT))?)?)
 	 */
 	protected void sequence_Field(EObject context, Field semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
