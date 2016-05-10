@@ -6,10 +6,13 @@ package com.pellcorp.mydsl;
 import org.eclipse.xtext.conversion.IValueConverterService;
 import org.eclipse.xtext.linking.ILinker;
 import org.eclipse.xtext.parsetree.reconstr.ITransientValueService;
+import org.eclipse.xtext.serializer.tokens.IValueSerializer;
 
 import com.pellcorp.mydsl.linker.MyDslLazyLinker;
+import com.pellcorp.mydsl.services.MyDslTokenUtil;
 import com.pellcorp.mydsl.services.MyDslTransientValueService;
 import com.pellcorp.mydsl.services.MyDslValueConverter;
+import com.pellcorp.mydsl.services.MyDslValueSerializer;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -30,4 +33,16 @@ public class MyDslRuntimeModule extends com.pellcorp.mydsl.AbstractMyDslRuntimeM
 	public Class<? extends IValueConverterService> bindIValueConverterService() {
 		return MyDslValueConverter.class;
 	}
+	
+	
+	public Class<? extends IValueSerializer> bindIValueSerializer() {
+		return MyDslValueSerializer.class;
+	}
+	
+	public Class<? extends org.eclipse.xtext.parsetree.reconstr.impl.TokenUtil> bindTokenUtil() {
+		return MyDslTokenUtil.class;
+	}
+	
+	
+	
 }
