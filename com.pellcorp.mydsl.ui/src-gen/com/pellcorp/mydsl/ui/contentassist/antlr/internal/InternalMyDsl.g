@@ -1839,8 +1839,8 @@ rule__Model__NameAssignment_1
     }
 :
 (
-{ before(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); }
-	RULE_ID{ after(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getModelAccess().getNameMyIDParserRuleCall_1_0()); }
+	ruleMyID{ after(grammarAccess.getModelAccess().getNameMyIDParserRuleCall_1_0()); }
 )
 
 ;

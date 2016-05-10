@@ -12,29 +12,29 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalMyDslLexer extends Lexer {
-    public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__13=13;
-    public static final int T__14=14;
-    public static final int EOF=-1;
     public static final int RULE_ID=4;
-    public static final int RULE_WS=11;
-    public static final int RULE_ANY_OTHER=12;
-    public static final int RULE_DECIMAL=8;
     public static final int RULE_DATE=7;
-    public static final int RULE_INT=6;
-    public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=9;
-    public static final int T__23=23;
-    public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__20=20;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=12;
     public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int EOF=-1;
+    public static final int RULE_SL_COMMENT=10;
+    public static final int RULE_ML_COMMENT=9;
+    public static final int T__19=19;
+    public static final int RULE_STRING=5;
+    public static final int T__16=16;
+    public static final int T__15=15;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int RULE_INT=6;
+    public static final int RULE_DECIMAL=8;
+    public static final int RULE_WS=11;
 
     // delegates
     // delegators
@@ -1123,7 +1123,7 @@ public class InternalMyDslLexer extends Lexer {
 
     protected DFA16 dfa16 = new DFA16(this);
     static final String DFA16_eotS =
-        "\1\uffff\2\30\1\uffff\2\30\10\uffff\1\47\2\26\1\uffff\3\26\2\uffff\1\30\1\uffff\1\30\1\uffff\2\30\10\uffff\1\47\2\uffff\1\47\4\uffff\4\30\1\47\4\30\1\47\4\30\1\uffff\1\30\1\101\3\30\1\uffff\6\30\1\113\1\30\1\115\1\uffff\1\30\1\uffff\1\117\1\uffff";
+        "\1\uffff\2\30\1\uffff\2\30\10\uffff\1\46\2\26\1\uffff\3\26\2\uffff\1\30\1\uffff\1\30\1\uffff\2\30\10\uffff\1\46\2\uffff\1\46\4\uffff\4\30\1\46\4\30\1\46\4\30\1\uffff\1\30\1\101\3\30\1\uffff\6\30\1\113\1\30\1\115\1\uffff\1\30\1\uffff\1\117\1\uffff";
     static final String DFA16_eofS =
         "\120\uffff";
     static final String DFA16_minS =
@@ -1131,9 +1131,9 @@ public class InternalMyDslLexer extends Lexer {
     static final String DFA16_maxS =
         "\1\uffff\1\145\1\156\1\uffff\1\157\1\145\10\uffff\2\71\1\172\1\uffff\2\uffff\1\57\2\uffff\1\162\1\uffff\1\164\1\uffff\1\162\1\163\10\uffff\1\71\2\uffff\1\71\4\uffff\1\143\1\151\1\153\1\143\1\71\1\145\1\164\1\163\1\162\1\71\1\156\1\171\1\160\1\151\1\uffff\1\164\1\172\1\141\1\160\1\141\1\uffff\1\143\1\164\1\147\1\145\1\151\1\145\1\172\1\157\1\172\1\uffff\1\156\1\uffff\1\172\1\uffff";
     static final String DFA16_acceptS =
-        "\3\uffff\1\3\2\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\3\uffff\1\21\3\uffff\1\25\1\26\1\uffff\1\21\1\uffff\1\3\2\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\uffff\1\20\1\17\1\uffff\1\22\1\23\1\24\1\25\16\uffff\1\16\5\uffff\1\2\11\uffff\1\4\1\uffff\1\1\1\uffff\1\5";
+        "\3\uffff\1\3\2\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\3\uffff\1\21\3\uffff\1\25\1\26\1\uffff\1\21\1\uffff\1\3\2\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\uffff\1\17\1\20\1\uffff\1\22\1\23\1\24\1\25\16\uffff\1\16\5\uffff\1\2\11\uffff\1\4\1\uffff\1\1\1\uffff\1\5";
     static final String DFA16_specialS =
-        "\1\0\21\uffff\1\1\1\2\74\uffff}>";
+        "\1\2\21\uffff\1\1\1\0\74\uffff}>";
     static final String[] DFA16_transitionS = {
             "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\2\26\1\15\1\26\1\13\1\17\1\6\1\24\12\16\1\11\1\3\5\26\32\21\1\12\1\26\1\14\1\20\1\21\1\26\3\21\1\5\1\2\12\21\1\1\6\21\1\4\3\21\1\7\1\26\1\10\uff82\26",
             "\1\27",
@@ -1149,7 +1149,7 @@ public class InternalMyDslLexer extends Lexer {
             "",
             "",
             "",
-            "\1\46\1\uffff\12\45",
+            "\1\47\1\uffff\12\45",
             "\12\50",
             "\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
@@ -1172,10 +1172,10 @@ public class InternalMyDslLexer extends Lexer {
             "",
             "",
             "",
-            "\1\46\1\uffff\12\61",
+            "\1\47\1\uffff\12\61",
             "",
             "",
-            "\1\46\1\uffff\12\50",
+            "\1\47\1\uffff\12\50",
             "",
             "",
             "",
@@ -1184,12 +1184,12 @@ public class InternalMyDslLexer extends Lexer {
             "\1\63",
             "\1\64",
             "\1\65",
-            "\1\46\1\uffff\12\66",
+            "\1\47\1\uffff\12\66",
             "\1\67",
             "\1\70",
             "\1\71",
             "\1\72",
-            "\1\73\1\46\1\uffff\12\50",
+            "\1\73\1\47\1\uffff\12\50",
             "\1\74",
             "\1\75",
             "\1\76",
@@ -1254,6 +1254,26 @@ public class InternalMyDslLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA16_19 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA16_19>='\u0000' && LA16_19<='\uFFFF')) ) {s = 41;}
+
+                        else s = 22;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA16_18 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA16_18>='\u0000' && LA16_18<='\uFFFF')) ) {s = 41;}
+
+                        else s = 22;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA16_0 = input.LA(1);
 
                         s = -1;
@@ -1300,26 +1320,6 @@ public class InternalMyDslLexer extends Lexer {
                         else if ( ((LA16_0>='\t' && LA16_0<='\n')||LA16_0=='\r'||LA16_0==' ') ) {s = 21;}
 
                         else if ( ((LA16_0>='\u0000' && LA16_0<='\b')||(LA16_0>='\u000B' && LA16_0<='\f')||(LA16_0>='\u000E' && LA16_0<='\u001F')||LA16_0=='!'||(LA16_0>='#' && LA16_0<='&')||(LA16_0>='(' && LA16_0<=')')||LA16_0=='+'||(LA16_0>='<' && LA16_0<='@')||LA16_0=='\\'||LA16_0=='`'||LA16_0=='|'||(LA16_0>='~' && LA16_0<='\uFFFF')) ) {s = 22;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA16_18 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA16_18>='\u0000' && LA16_18<='\uFFFF')) ) {s = 41;}
-
-                        else s = 22;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA16_19 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA16_19>='\u0000' && LA16_19<='\uFFFF')) ) {s = 41;}
-
-                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;

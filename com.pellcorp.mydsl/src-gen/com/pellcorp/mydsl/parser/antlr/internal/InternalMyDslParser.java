@@ -21,31 +21,31 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_DATE", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'workspace'", "';'", "'description'", "'percentage'", "'entity'", "'.'", "'{'", "'}'", "':'", "'['", "','", "'*'", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_DATE", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'workspace'", "';'", "'description'", "'percentage'", "'entity'", "'.'", "'{'", "'}'", "':'", "'['", "','", "'*'", "']'"
     };
-    public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__13=13;
-    public static final int T__14=14;
-    public static final int EOF=-1;
-    public static final int RULE_ID=4;
-    public static final int RULE_WS=11;
-    public static final int RULE_ANY_OTHER=12;
-    public static final int RULE_DECIMAL=8;
+    public static final int RULE_ID=5;
     public static final int RULE_DATE=7;
-    public static final int RULE_INT=6;
-    public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=9;
-    public static final int T__23=23;
-    public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__20=20;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=12;
     public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int RULE_SL_COMMENT=10;
+    public static final int EOF=-1;
+    public static final int RULE_ML_COMMENT=9;
+    public static final int T__19=19;
+    public static final int RULE_STRING=4;
+    public static final int T__16=16;
+    public static final int T__15=15;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int RULE_INT=6;
+    public static final int RULE_WS=11;
+    public static final int RULE_DECIMAL=8;
 
     // delegates
     // delegators
@@ -122,51 +122,57 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:76:1: ruleModel returns [EObject current=null] : (otherlv_0= 'workspace' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )* ) ;
+    // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:76:1: ruleModel returns [EObject current=null] : (otherlv_0= 'workspace' ( (lv_name_1_0= ruleMyID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )* ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token lv_description_4_0=null;
         Token otherlv_5=null;
+        AntlrDatatypeRuleToken lv_name_1_0 = null;
+
         EObject lv_dataTypes_6_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:79:28: ( (otherlv_0= 'workspace' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )* ) )
-            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:80:1: (otherlv_0= 'workspace' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )* )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:79:28: ( (otherlv_0= 'workspace' ( (lv_name_1_0= ruleMyID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )* ) )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:80:1: (otherlv_0= 'workspace' ( (lv_name_1_0= ruleMyID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )* )
             {
-            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:80:1: (otherlv_0= 'workspace' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )* )
-            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:80:3: otherlv_0= 'workspace' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )*
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:80:1: (otherlv_0= 'workspace' ( (lv_name_1_0= ruleMyID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )* )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:80:3: otherlv_0= 'workspace' ( (lv_name_1_0= ruleMyID ) ) otherlv_2= ';' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_dataTypes_6_0= ruleEntity ) )*
             {
             otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleModel122); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getModelAccess().getWorkspaceKeyword_0());
                 
-            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:84:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:85:1: (lv_name_1_0= RULE_ID )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:84:1: ( (lv_name_1_0= ruleMyID ) )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:85:1: (lv_name_1_0= ruleMyID )
             {
-            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:85:1: (lv_name_1_0= RULE_ID )
-            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:86:3: lv_name_1_0= RULE_ID
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:85:1: (lv_name_1_0= ruleMyID )
+            // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:86:3: lv_name_1_0= ruleMyID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleModel139); 
+             
+            	        newCompositeNode(grammarAccess.getModelAccess().getNameMyIDParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleMyID_in_ruleModel143);
+            lv_name_1_0=ruleMyID();
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); 
-            		
+            state._fsp--;
+
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getModelRule());
+            	            current = createModelElementForParent(grammarAccess.getModelRule());
             	        }
-                   		setWithLastConsumed(
+                   		set(
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"ID");
+                    		"MyID");
+            	        afterParserOrEnumRuleCall();
             	    
 
             }
@@ -174,7 +180,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleModel156); 
+            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleModel155); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getModelAccess().getSemicolonKeyword_2());
                 
@@ -189,7 +195,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:106:3: otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';'
                     {
-                    otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleModel169); 
+                    otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleModel168); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getModelAccess().getDescriptionKeyword_3_0());
                         
@@ -199,7 +205,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:111:1: (lv_description_4_0= RULE_STRING )
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:112:3: lv_description_4_0= RULE_STRING
                     {
-                    lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleModel186); 
+                    lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleModel185); 
 
                     			newLeafNode(lv_description_4_0, grammarAccess.getModelAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
                     		
@@ -219,7 +225,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleModel203); 
+                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleModel202); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getModelAccess().getSemicolonKeyword_3_2());
                         
@@ -250,7 +256,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             	     
             	    	        newCompositeNode(grammarAccess.getModelAccess().getDataTypesEntityParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEntity_in_ruleModel226);
+            	    pushFollow(FOLLOW_ruleEntity_in_ruleModel225);
             	    lv_dataTypes_6_0=ruleEntity();
 
             	    state._fsp--;
@@ -311,13 +317,13 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:160:2: iv_ruleMyID= ruleMyID EOF
             {
              newCompositeNode(grammarAccess.getMyIDRule()); 
-            pushFollow(FOLLOW_ruleMyID_in_entryRuleMyID264);
+            pushFollow(FOLLOW_ruleMyID_in_entryRuleMyID263);
             iv_ruleMyID=ruleMyID();
 
             state._fsp--;
 
              current =iv_ruleMyID.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMyID275); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMyID274); 
 
             }
 
@@ -377,7 +383,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:171:6: this_ID_0= RULE_ID
                     {
-                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMyID315); 
+                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMyID314); 
 
                     		current.merge(this_ID_0);
                         
@@ -390,7 +396,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:180:2: kw= 'percentage'
                     {
-                    kw=(Token)match(input,16,FOLLOW_16_in_ruleMyID339); 
+                    kw=(Token)match(input,16,FOLLOW_16_in_ruleMyID338); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getMyIDAccess().getPercentageKeyword_1()); 
@@ -401,7 +407,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:187:2: kw= 'entity'
                     {
-                    kw=(Token)match(input,17,FOLLOW_17_in_ruleMyID358); 
+                    kw=(Token)match(input,17,FOLLOW_17_in_ruleMyID357); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getMyIDAccess().getEntityKeyword_2()); 
@@ -442,13 +448,13 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:202:2: iv_ruleFQN= ruleFQN EOF
             {
              newCompositeNode(grammarAccess.getFQNRule()); 
-            pushFollow(FOLLOW_ruleFQN_in_entryRuleFQN399);
+            pushFollow(FOLLOW_ruleFQN_in_entryRuleFQN398);
             iv_ruleFQN=ruleFQN();
 
             state._fsp--;
 
              current =iv_ruleFQN.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFQN410); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFQN409); 
 
             }
 
@@ -488,7 +494,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getFQNAccess().getMyIDParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleMyID_in_ruleFQN457);
+            pushFollow(FOLLOW_ruleMyID_in_ruleFQN456);
             this_MyID_0=ruleMyID();
 
             state._fsp--;
@@ -514,7 +520,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:225:2: kw= '.' this_MyID_2= ruleMyID
             	    {
-            	    kw=(Token)match(input,18,FOLLOW_18_in_ruleFQN476); 
+            	    kw=(Token)match(input,18,FOLLOW_18_in_ruleFQN475); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getFQNAccess().getFullStopKeyword_1_0()); 
@@ -522,7 +528,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             	     
             	            newCompositeNode(grammarAccess.getFQNAccess().getMyIDParserRuleCall_1_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleMyID_in_ruleFQN498);
+            	    pushFollow(FOLLOW_ruleMyID_in_ruleFQN497);
             	    this_MyID_2=ruleMyID();
 
             	    state._fsp--;
@@ -575,13 +581,13 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:253:2: iv_ruleEntity= ruleEntity EOF
             {
              newCompositeNode(grammarAccess.getEntityRule()); 
-            pushFollow(FOLLOW_ruleEntity_in_entryRuleEntity547);
+            pushFollow(FOLLOW_ruleEntity_in_entryRuleEntity546);
             iv_ruleEntity=ruleEntity();
 
             state._fsp--;
 
              current =iv_ruleEntity; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEntity557); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEntity556); 
 
             }
 
@@ -623,7 +629,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:264:1: (otherlv_0= 'entity' ( (lv_name_1_0= ruleMyID ) ) otherlv_2= '{' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_fields_6_0= ruleField ) )* otherlv_7= '}' )
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:264:3: otherlv_0= 'entity' ( (lv_name_1_0= ruleMyID ) ) otherlv_2= '{' (otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';' )? ( (lv_fields_6_0= ruleField ) )* otherlv_7= '}'
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleEntity594); 
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleEntity593); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEntityAccess().getEntityKeyword_0());
                 
@@ -636,7 +642,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getEntityAccess().getNameMyIDParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleMyID_in_ruleEntity615);
+            pushFollow(FOLLOW_ruleMyID_in_ruleEntity614);
             lv_name_1_0=ruleMyID();
 
             state._fsp--;
@@ -658,7 +664,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleEntity627); 
+            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleEntity626); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getEntityAccess().getLeftCurlyBracketKeyword_2());
                 
@@ -673,7 +679,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:290:3: otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';'
                     {
-                    otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleEntity640); 
+                    otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleEntity639); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getEntityAccess().getDescriptionKeyword_3_0());
                         
@@ -683,7 +689,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:295:1: (lv_description_4_0= RULE_STRING )
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:296:3: lv_description_4_0= RULE_STRING
                     {
-                    lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEntity657); 
+                    lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEntity656); 
 
                     			newLeafNode(lv_description_4_0, grammarAccess.getEntityAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
                     		
@@ -703,7 +709,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleEntity674); 
+                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleEntity673); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getEntityAccess().getSemicolonKeyword_3_2());
                         
@@ -734,7 +740,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             	     
             	    	        newCompositeNode(grammarAccess.getEntityAccess().getFieldsFieldParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleField_in_ruleEntity697);
+            	    pushFollow(FOLLOW_ruleField_in_ruleEntity696);
             	    lv_fields_6_0=ruleField();
 
             	    state._fsp--;
@@ -762,7 +768,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,20,FOLLOW_20_in_ruleEntity710); 
+            otherlv_7=(Token)match(input,20,FOLLOW_20_in_ruleEntity709); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_5());
                 
@@ -799,13 +805,13 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:348:2: iv_ruleBuiltInType= ruleBuiltInType EOF
             {
              newCompositeNode(grammarAccess.getBuiltInTypeRule()); 
-            pushFollow(FOLLOW_ruleBuiltInType_in_entryRuleBuiltInType746);
+            pushFollow(FOLLOW_ruleBuiltInType_in_entryRuleBuiltInType745);
             iv_ruleBuiltInType=ruleBuiltInType();
 
             state._fsp--;
 
              current =iv_ruleBuiltInType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBuiltInType756); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBuiltInType755); 
 
             }
 
@@ -849,7 +855,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getBuiltInTypeAccess().getNameMyIDParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleMyID_in_ruleBuiltInType802);
+            pushFollow(FOLLOW_ruleMyID_in_ruleBuiltInType801);
             lv_name_0_0=ruleMyID();
 
             state._fsp--;
@@ -877,7 +883,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:378:1: (lv_description_1_0= RULE_STRING )
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:379:3: lv_description_1_0= RULE_STRING
             {
-            lv_description_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBuiltInType819); 
+            lv_description_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBuiltInType818); 
 
             			newLeafNode(lv_description_1_0, grammarAccess.getBuiltInTypeAccess().getDescriptionSTRINGTerminalRuleCall_1_0()); 
             		
@@ -930,13 +936,13 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:405:2: iv_ruleField= ruleField EOF
             {
              newCompositeNode(grammarAccess.getFieldRule()); 
-            pushFollow(FOLLOW_ruleField_in_entryRuleField860);
+            pushFollow(FOLLOW_ruleField_in_entryRuleField859);
             iv_ruleField=ruleField();
 
             state._fsp--;
 
              current =iv_ruleField; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleField870); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleField869); 
 
             }
 
@@ -991,7 +997,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getFieldAccess().getNameMyIDParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleMyID_in_ruleField916);
+            pushFollow(FOLLOW_ruleMyID_in_ruleField915);
             lv_name_0_0=ruleMyID();
 
             state._fsp--;
@@ -1013,7 +1019,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleField928); 
+            otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleField927); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getFieldAccess().getColonKeyword_1());
                 
@@ -1031,7 +1037,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getFieldAccess().getTypeDataTypeCrossReference_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleFQN_in_ruleField951);
+            pushFollow(FOLLOW_ruleFQN_in_ruleField950);
             ruleFQN();
 
             state._fsp--;
@@ -1079,7 +1085,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:453:6: otherlv_3= 'description' ( (lv_description_4_0= RULE_STRING ) ) otherlv_5= ';'
                             {
-                            otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleField966); 
+                            otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleField965); 
 
                                 	newLeafNode(otherlv_3, grammarAccess.getFieldAccess().getDescriptionKeyword_3_0_0_0());
                                 
@@ -1089,7 +1095,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:458:1: (lv_description_4_0= RULE_STRING )
                             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:459:3: lv_description_4_0= RULE_STRING
                             {
-                            lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleField983); 
+                            lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleField982); 
 
                             			newLeafNode(lv_description_4_0, grammarAccess.getFieldAccess().getDescriptionSTRINGTerminalRuleCall_3_0_0_1_0()); 
                             		
@@ -1109,7 +1115,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleField1000); 
+                            otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleField999); 
 
                                 	newLeafNode(otherlv_5, grammarAccess.getFieldAccess().getSemicolonKeyword_3_0_0_2());
                                 
@@ -1130,7 +1136,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:479:5: otherlv_6= '[' ( (lv_lower_7_0= RULE_INT ) ) otherlv_8= ',' ( ( (lv_upperUnlimited_9_0= '*' ) ) | ( (lv_upper_10_0= RULE_INT ) ) ) otherlv_11= ']' otherlv_12= ';'
                             {
-                            otherlv_6=(Token)match(input,22,FOLLOW_22_in_ruleField1015); 
+                            otherlv_6=(Token)match(input,22,FOLLOW_22_in_ruleField1014); 
 
                                 	newLeafNode(otherlv_6, grammarAccess.getFieldAccess().getLeftSquareBracketKeyword_3_0_1_0());
                                 
@@ -1140,7 +1146,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:484:1: (lv_lower_7_0= RULE_INT )
                             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:485:3: lv_lower_7_0= RULE_INT
                             {
-                            lv_lower_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleField1032); 
+                            lv_lower_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleField1031); 
 
                             			newLeafNode(lv_lower_7_0, grammarAccess.getFieldAccess().getLowerINTTerminalRuleCall_3_0_1_1_0()); 
                             		
@@ -1160,7 +1166,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_8=(Token)match(input,23,FOLLOW_23_in_ruleField1049); 
+                            otherlv_8=(Token)match(input,23,FOLLOW_23_in_ruleField1048); 
 
                                 	newLeafNode(otherlv_8, grammarAccess.getFieldAccess().getCommaKeyword_3_0_1_2());
                                 
@@ -1190,7 +1196,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:506:1: (lv_upperUnlimited_9_0= '*' )
                                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:507:3: lv_upperUnlimited_9_0= '*'
                                     {
-                                    lv_upperUnlimited_9_0=(Token)match(input,24,FOLLOW_24_in_ruleField1068); 
+                                    lv_upperUnlimited_9_0=(Token)match(input,24,FOLLOW_24_in_ruleField1067); 
 
                                             newLeafNode(lv_upperUnlimited_9_0, grammarAccess.getFieldAccess().getUpperUnlimitedAsteriskKeyword_3_0_1_3_0_0());
                                         
@@ -1218,7 +1224,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:522:1: (lv_upper_10_0= RULE_INT )
                                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:523:3: lv_upper_10_0= RULE_INT
                                     {
-                                    lv_upper_10_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleField1104); 
+                                    lv_upper_10_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleField1103); 
 
                                     			newLeafNode(lv_upper_10_0, grammarAccess.getFieldAccess().getUpperINTTerminalRuleCall_3_0_1_3_1_0()); 
                                     		
@@ -1244,11 +1250,11 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_11=(Token)match(input,25,FOLLOW_25_in_ruleField1122); 
+                            otherlv_11=(Token)match(input,25,FOLLOW_25_in_ruleField1121); 
 
                                 	newLeafNode(otherlv_11, grammarAccess.getFieldAccess().getRightSquareBracketKeyword_3_0_1_4());
                                 
-                            otherlv_12=(Token)match(input,14,FOLLOW_14_in_ruleField1134); 
+                            otherlv_12=(Token)match(input,14,FOLLOW_14_in_ruleField1133); 
 
                                 	newLeafNode(otherlv_12, grammarAccess.getFieldAccess().getSemicolonKeyword_3_0_1_5());
                                 
@@ -1267,7 +1273,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:548:7: otherlv_13= ';'
                     {
-                    otherlv_13=(Token)match(input,14,FOLLOW_14_in_ruleField1155); 
+                    otherlv_13=(Token)match(input,14,FOLLOW_14_in_ruleField1154); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getFieldAccess().getSemicolonKeyword_3_1());
                         
@@ -1310,13 +1316,13 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:564:2: iv_ruleChampionChallengerPort= ruleChampionChallengerPort EOF
             {
              newCompositeNode(grammarAccess.getChampionChallengerPortRule()); 
-            pushFollow(FOLLOW_ruleChampionChallengerPort_in_entryRuleChampionChallengerPort1194);
+            pushFollow(FOLLOW_ruleChampionChallengerPort_in_entryRuleChampionChallengerPort1193);
             iv_ruleChampionChallengerPort=ruleChampionChallengerPort();
 
             state._fsp--;
 
              current =iv_ruleChampionChallengerPort; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleChampionChallengerPort1204); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleChampionChallengerPort1203); 
 
             }
 
@@ -1366,7 +1372,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getChampionChallengerPortAccess().getNameMyIDParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleMyID_in_ruleChampionChallengerPort1250);
+            pushFollow(FOLLOW_ruleMyID_in_ruleChampionChallengerPort1249);
             lv_name_0_0=ruleMyID();
 
             state._fsp--;
@@ -1388,7 +1394,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleChampionChallengerPort1262); 
+            otherlv_1=(Token)match(input,21,FOLLOW_21_in_ruleChampionChallengerPort1261); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getChampionChallengerPortAccess().getColonKeyword_1());
                 
@@ -1406,7 +1412,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getChampionChallengerPortAccess().getTypeDataTypeCrossReference_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleFQN_in_ruleChampionChallengerPort1285);
+            pushFollow(FOLLOW_ruleFQN_in_ruleChampionChallengerPort1284);
             ruleFQN();
 
             state._fsp--;
@@ -1420,15 +1426,15 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleChampionChallengerPort1297); 
+            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleChampionChallengerPort1296); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getChampionChallengerPortAccess().getLeftCurlyBracketKeyword_3());
                 
-            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleChampionChallengerPort1309); 
+            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleChampionChallengerPort1308); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getChampionChallengerPortAccess().getPercentageKeyword_4());
                 
-            otherlv_5=(Token)match(input,21,FOLLOW_21_in_ruleChampionChallengerPort1321); 
+            otherlv_5=(Token)match(input,21,FOLLOW_21_in_ruleChampionChallengerPort1320); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getChampionChallengerPortAccess().getColonKeyword_5());
                 
@@ -1438,7 +1444,7 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:625:1: (lv_percentage_6_0= RULE_INT )
             // ../com.pellcorp.mydsl/src-gen/com/pellcorp/mydsl/parser/antlr/internal/InternalMyDsl.g:626:3: lv_percentage_6_0= RULE_INT
             {
-            lv_percentage_6_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleChampionChallengerPort1338); 
+            lv_percentage_6_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleChampionChallengerPort1337); 
 
             			newLeafNode(lv_percentage_6_0, grammarAccess.getChampionChallengerPortAccess().getPercentageINTTerminalRuleCall_6_0()); 
             		
@@ -1458,11 +1464,11 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,14,FOLLOW_14_in_ruleChampionChallengerPort1355); 
+            otherlv_7=(Token)match(input,14,FOLLOW_14_in_ruleChampionChallengerPort1354); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getChampionChallengerPortAccess().getSemicolonKeyword_7());
                 
-            otherlv_8=(Token)match(input,20,FOLLOW_20_in_ruleChampionChallengerPort1367); 
+            otherlv_8=(Token)match(input,20,FOLLOW_20_in_ruleChampionChallengerPort1366); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getChampionChallengerPortAccess().getRightCurlyBracketKeyword_8());
                 
@@ -1492,63 +1498,63 @@ public class InternalMyDslParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleModel122 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleModel139 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleModel156 = new BitSet(new long[]{0x0000000000028002L});
-    public static final BitSet FOLLOW_15_in_ruleModel169 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleModel186 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleModel203 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_ruleEntity_in_ruleModel226 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_ruleMyID_in_entryRuleMyID264 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMyID275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMyID315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleMyID339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleMyID358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_entryRuleFQN399 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFQN410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMyID_in_ruleFQN457 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleFQN476 = new BitSet(new long[]{0x0000000000030010L});
-    public static final BitSet FOLLOW_ruleMyID_in_ruleFQN498 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity547 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEntity557 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleEntity594 = new BitSet(new long[]{0x0000000000030010L});
-    public static final BitSet FOLLOW_ruleMyID_in_ruleEntity615 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEntity627 = new BitSet(new long[]{0x0000000000138010L});
-    public static final BitSet FOLLOW_15_in_ruleEntity640 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEntity657 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleEntity674 = new BitSet(new long[]{0x0000000000130010L});
-    public static final BitSet FOLLOW_ruleField_in_ruleEntity697 = new BitSet(new long[]{0x0000000000130010L});
-    public static final BitSet FOLLOW_20_in_ruleEntity710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBuiltInType_in_entryRuleBuiltInType746 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBuiltInType756 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMyID_in_ruleBuiltInType802 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBuiltInType819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleField_in_entryRuleField860 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleField870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMyID_in_ruleField916 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleField928 = new BitSet(new long[]{0x0000000000030010L});
-    public static final BitSet FOLLOW_ruleFQN_in_ruleField951 = new BitSet(new long[]{0x000000000040C002L});
-    public static final BitSet FOLLOW_15_in_ruleField966 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleField983 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleField1000 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleField1015 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleField1032 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleField1049 = new BitSet(new long[]{0x0000000001000040L});
-    public static final BitSet FOLLOW_24_in_ruleField1068 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleField1104 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleField1122 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleField1134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleField1155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleChampionChallengerPort_in_entryRuleChampionChallengerPort1194 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleChampionChallengerPort1204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMyID_in_ruleChampionChallengerPort1250 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleChampionChallengerPort1262 = new BitSet(new long[]{0x0000000000030010L});
-    public static final BitSet FOLLOW_ruleFQN_in_ruleChampionChallengerPort1285 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleChampionChallengerPort1297 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleChampionChallengerPort1309 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleChampionChallengerPort1321 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleChampionChallengerPort1338 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleChampionChallengerPort1355 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleChampionChallengerPort1367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleModel122 = new BitSet(new long[]{0x0000000000030020L});
+    public static final BitSet FOLLOW_ruleMyID_in_ruleModel143 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleModel155 = new BitSet(new long[]{0x0000000000028002L});
+    public static final BitSet FOLLOW_15_in_ruleModel168 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleModel185 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleModel202 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_ruleEntity_in_ruleModel225 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_ruleMyID_in_entryRuleMyID263 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMyID274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMyID314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_ruleMyID338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleMyID357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_entryRuleFQN398 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFQN409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMyID_in_ruleFQN456 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_18_in_ruleFQN475 = new BitSet(new long[]{0x0000000000030020L});
+    public static final BitSet FOLLOW_ruleMyID_in_ruleFQN497 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity546 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEntity556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleEntity593 = new BitSet(new long[]{0x0000000000030020L});
+    public static final BitSet FOLLOW_ruleMyID_in_ruleEntity614 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEntity626 = new BitSet(new long[]{0x0000000000138020L});
+    public static final BitSet FOLLOW_15_in_ruleEntity639 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEntity656 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleEntity673 = new BitSet(new long[]{0x0000000000130020L});
+    public static final BitSet FOLLOW_ruleField_in_ruleEntity696 = new BitSet(new long[]{0x0000000000130020L});
+    public static final BitSet FOLLOW_20_in_ruleEntity709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBuiltInType_in_entryRuleBuiltInType745 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBuiltInType755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMyID_in_ruleBuiltInType801 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBuiltInType818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleField_in_entryRuleField859 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleField869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMyID_in_ruleField915 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleField927 = new BitSet(new long[]{0x0000000000030020L});
+    public static final BitSet FOLLOW_ruleFQN_in_ruleField950 = new BitSet(new long[]{0x000000000040C002L});
+    public static final BitSet FOLLOW_15_in_ruleField965 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleField982 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleField999 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_22_in_ruleField1014 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleField1031 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleField1048 = new BitSet(new long[]{0x0000000001000040L});
+    public static final BitSet FOLLOW_24_in_ruleField1067 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleField1103 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleField1121 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleField1133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleField1154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleChampionChallengerPort_in_entryRuleChampionChallengerPort1193 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleChampionChallengerPort1203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMyID_in_ruleChampionChallengerPort1249 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleChampionChallengerPort1261 = new BitSet(new long[]{0x0000000000030020L});
+    public static final BitSet FOLLOW_ruleFQN_in_ruleChampionChallengerPort1284 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleChampionChallengerPort1296 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleChampionChallengerPort1308 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleChampionChallengerPort1320 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleChampionChallengerPort1337 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleChampionChallengerPort1354 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleChampionChallengerPort1366 = new BitSet(new long[]{0x0000000000000002L});
 
 }

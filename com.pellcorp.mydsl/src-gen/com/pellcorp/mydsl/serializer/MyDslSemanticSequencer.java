@@ -126,7 +126,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID description=STRING? dataTypes+=Entity*)
+	 *     (name=MyID description=STRING? dataTypes+=Entity*)
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

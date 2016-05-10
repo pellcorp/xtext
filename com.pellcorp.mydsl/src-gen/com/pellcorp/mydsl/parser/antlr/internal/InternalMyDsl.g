@@ -83,19 +83,19 @@ ruleModel returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getModelAccess().getNameMyIDParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleMyID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getModelRule());
+	            $current = createModelElementForParent(grammarAccess.getModelRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"MyID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )

@@ -24,29 +24,29 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_DATE", "RULE_DECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'percentage'", "'entity'", "';'", "'workspace'", "'description'", "'.'", "'{'", "'}'", "':'", "'['", "','", "']'", "'*'"
     };
-    public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__13=13;
-    public static final int T__14=14;
-    public static final int EOF=-1;
     public static final int RULE_ID=4;
-    public static final int RULE_WS=11;
-    public static final int RULE_ANY_OTHER=12;
-    public static final int RULE_DECIMAL=8;
     public static final int RULE_DATE=7;
-    public static final int RULE_INT=6;
-    public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=9;
-    public static final int T__23=23;
-    public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__20=20;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=12;
     public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int RULE_SL_COMMENT=10;
+    public static final int EOF=-1;
+    public static final int RULE_ML_COMMENT=9;
+    public static final int T__19=19;
+    public static final int RULE_STRING=5;
+    public static final int T__16=16;
+    public static final int T__15=15;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int RULE_INT=6;
+    public static final int RULE_WS=11;
+    public static final int RULE_DECIMAL=8;
 
     // delegates
     // delegators
@@ -4683,21 +4683,25 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__NameAssignment_1"
-    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1836:1: rule__Model__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1836:1: rule__Model__NameAssignment_1 : ( ruleMyID ) ;
     public final void rule__Model__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1840:1: ( ( RULE_ID ) )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1841:1: ( RULE_ID )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1840:1: ( ( ruleMyID ) )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1841:1: ( ruleMyID )
             {
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1841:1: ( RULE_ID )
-            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1842:1: RULE_ID
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1841:1: ( ruleMyID )
+            // ../com.pellcorp.mydsl.ui/src-gen/com/pellcorp/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:1842:1: ruleMyID
             {
-             before(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Model__NameAssignment_13606); 
-             after(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getModelAccess().getNameMyIDParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleMyID_in_rule__Model__NameAssignment_13606);
+            ruleMyID();
+
+            state._fsp--;
+
+             after(grammarAccess.getModelAccess().getNameMyIDParserRuleCall_1_0()); 
 
             }
 
@@ -5399,7 +5403,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_15_in_rule__Field__Alternatives_3586 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Field__UpperUnlimitedAssignment_3_0_1_3_0_in_rule__Field__Alternatives_3_0_1_3620 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Field__UpperAssignment_3_0_1_3_1_in_rule__Field__Alternatives_3_0_1_3638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0669 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0669 = new BitSet(new long[]{0x0000000000006010L});
     public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0672 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_16_in_rule__Model__Group__0__Impl700 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1731 = new BitSet(new long[]{0x0000000000008000L});
@@ -5528,7 +5532,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_15_in_rule__ChampionChallengerPort__Group__7__Impl3493 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ChampionChallengerPort__Group__8__Impl_in_rule__ChampionChallengerPort__Group__83524 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_20_in_rule__ChampionChallengerPort__Group__8__Impl3552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Model__NameAssignment_13606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMyID_in_rule__Model__NameAssignment_13606 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rule__Model__DescriptionAssignment_3_13637 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleEntity_in_rule__Model__DataTypesAssignment_43668 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleMyID_in_rule__Entity__NameAssignment_13699 = new BitSet(new long[]{0x0000000000000002L});

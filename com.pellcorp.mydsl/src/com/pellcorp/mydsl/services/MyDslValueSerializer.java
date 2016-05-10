@@ -9,7 +9,12 @@ import org.eclipse.xtext.serializer.tokens.ValueSerializer;
 @SuppressWarnings("restriction")
 public class MyDslValueSerializer extends ValueSerializer {
 	public String serializeAssignedValue(EObject context, RuleCall ruleCall, Object value, INode node, Acceptor errors) {
-		String s = super.serializeAssignedValue(context, ruleCall, value, node, errors);
-		return s;
+		String name = ruleCall.getRule().getName();
+		if ("MyID".equals(name)) {
+			String s = super.serializeAssignedValue(context, ruleCall, value, null, errors);
+			return s;
+		} else {
+			return super.serializeAssignedValue(context, ruleCall, value, node, errors);
+		}
 	}
 }

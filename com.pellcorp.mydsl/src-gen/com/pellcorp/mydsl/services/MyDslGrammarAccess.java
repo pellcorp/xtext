@@ -23,7 +23,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWorkspaceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameMyIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cDescriptionKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
@@ -34,20 +34,20 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDataTypesEntityParserRuleCall_4_0 = (RuleCall)cDataTypesAssignment_4.eContents().get(0);
 		
 		//Model:
-		//	"workspace" name=ID ";" ("description" description=STRING ";")? dataTypes+=Entity*;
+		//	"workspace" name=MyID ";" ("description" description=STRING ";")? dataTypes+=Entity*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"workspace" name=ID ";" ("description" description=STRING ";")? dataTypes+=Entity*
+		//"workspace" name=MyID ";" ("description" description=STRING ";")? dataTypes+=Entity*
 		public Group getGroup() { return cGroup; }
 
 		//"workspace"
 		public Keyword getWorkspaceKeyword_0() { return cWorkspaceKeyword_0; }
 
-		//name=ID
+		//name=MyID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//MyID
+		public RuleCall getNameMyIDParserRuleCall_1_0() { return cNameMyIDParserRuleCall_1_0; }
 
 		//";"
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
@@ -577,7 +577,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	"workspace" name=ID ";" ("description" description=STRING ";")? dataTypes+=Entity*;
+	//	"workspace" name=MyID ";" ("description" description=STRING ";")? dataTypes+=Entity*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
